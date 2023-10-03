@@ -73,6 +73,7 @@ in
   imports = [
     (import "${home-manager}/nixos")
     ./sway.nix
+    # ./hyprland.nix
   ];
 
   home-manager = {

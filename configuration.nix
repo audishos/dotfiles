@@ -61,6 +61,9 @@
   # Enable zsh
   programs.zsh.enable = true;
 
+  # Experiemental features
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
   # Enable the X11 windowing system.
   # services.xserver.enable = true;
 
