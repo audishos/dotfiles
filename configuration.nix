@@ -104,7 +104,7 @@
     polkit.enable = true;
     pam.services.swaylock.text = "auth include login";
   };
-  
+
   #environment.etc = {
   #  "pipewire/pipewire.conf.d/92-low-latency.conf".text = ''
   #    context.properties = {
@@ -127,10 +127,6 @@
     shell = pkgs.zsh;
     home = "/home/audisho";
     extraGroups = [ "wheel" "networkmanager" ]; # Enable ‘sudo’ for the user.
-    packages = with pkgs; [
-      firefox
-      tree
-    ];
   };
 
   # List packages installed in system profile. To search, run:
