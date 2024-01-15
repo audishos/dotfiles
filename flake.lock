@@ -121,11 +121,11 @@
     "neovimConfig": {
       "flake": false,
       "locked": {
-        "lastModified": 1705355437,
-        "narHash": "sha256-f+CbEyte5zEhZFQ1nfT054gAUG6JBmSeQfaETInsPWY=",
+        "lastModified": 1705357895,
+        "narHash": "sha256-e227Q17ak5Lao9Z9XAAUt7Ei1nb3fEaHco6ZLueiucE=",
         "owner": "audishos",
         "repo": "neovim-config",
-        "rev": "66847702e3e5d480fb680877edecf7a101e223a1",
+        "rev": "ca7f9377176037b7d5e450ff111b3ca09b9b3f82",
         "type": "github"
       },
       "original": {
