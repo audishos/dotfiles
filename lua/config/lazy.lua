@@ -46,8 +46,4 @@ require("lazy").setup({
       },
     },
   },
-  dev = {
-    path = "~/.local/share/nvim/nix",
-    fallback = false,
-  },
 })
