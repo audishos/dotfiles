@@ -8,7 +8,7 @@
     [
       # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      ./home-manager.nix
+      # ./home-manager.nix
     ];
 
   # Use the systemd-boot EFI boot loader.
@@ -88,6 +88,23 @@
     };
   };
 
+  # For sway
+  environment.sessionVariables.NIXOS_OZONE_WL = "1";
+
+  xdg.portal = {
+    enable = true;
+    wlr.enable = true;
+    extraPortals = with pkgs; [
+      xdg-desktop-portal-gtk
+      xdg-desktop-portal-wlr
+    ];
+  };
+
+  security = {
+    polkit.enable = true;
+    pam.services.swaylock.text = "auth include login";
+  };
+  
   #environment.etc = {
   #  "pipewire/pipewire.conf.d/92-low-latency.conf".text = ''
   #    context.properties = {
@@ -130,11 +147,13 @@
     libva-utils
     radeontop
     nixpkgs-fmt
+    openvpn3
     # mixxx
   ];
 
   programs.steam.enable = true;
   services.udev.packages = with pkgs; [ mixxx ];
+  services.flatpak.enable = true;
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.

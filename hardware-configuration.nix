@@ -35,7 +35,7 @@
   # networking.interfaces.eno1.useDHCP = lib.mkDefault true;
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
-  powerManagement.cpuFreqGovernor = lib.mkDefault "powersave";
+  powerManagement.cpuFreqGovernor = lib.mkDefault "performance";
   hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
   
   hardware.opengl = {
@@ -54,5 +54,6 @@
     ];
   };
 
-  environment.variables.AMD_VULKAN_ICD = "AMDVLK";
+  # environment.variables.AMD_VULKAN_ICD = "AMDVLK";
+  environment.variables.AMD_VULKAN_ICD = "RADV";
 }
