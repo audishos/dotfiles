@@ -1,4 +1,24 @@
 { config, lib, pkgs, nixvim, neovimConfig, ... }:
+let
+  calibreLibcryptoPatch = pkgs.calibre.overrideAttrs
+    (attrs: {
+      preFixup = (
+        builtins.replaceStrings
+          [
+            ''
+              --prefix PYTHONPATH : $PYTHONPATH \
+            ''
+          ]
+          [
+            ''
+              --prefix LD_LIBRARY_PATH : ${pkgs.openssl.out}/lib:${pkgs.udisks.out} \
+              --prefix PYTHONPATH : $PYTHONPATH \
+            ''
+          ]
+          attrs.preFixup
+      );
+    });
+in
 {
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
@@ -50,8 +70,6 @@
       r2modman
 
       # Sway
-      swaylock
-      swayidle
       wl-clipboard
       mako
       alacritty
@@ -64,6 +82,20 @@
       slurp
       wdisplays
       wezterm
+      calibreLibcryptoPatch
+      zip
+      binutils
+      ruff-lsp
+      nodePackages.pyright
+      openssl
+      python3
+      udisks
+      # zlib
+      # libffi
+      # readline
+      # bzip2
+      # ncurses
+      # libressl
 
       # Hyprland
       kitty
@@ -92,6 +124,9 @@
     initExtra =
       ''
         eval "$(fnm env --use-on-cd)"
+        export PYENV_ROOT="$HOME/.pyenv"
+        [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+        eval "$(pyenv init -)"
       '';
   };
 
@@ -247,8 +282,36 @@
       bars = [{
         command = "waybar";
       }];
-      output."*" = { adaptive_sync = "on"; };
+      output."*" = {
+        adaptive_sync = "on";
+        bg = "/home/audisho/Pictures/wallpaper/warm-strokes.png fill";
+      };
     };
+  };
+
+  programs.swaylock = {
+    enable = true;
+    settings = {
+      color = "808080";
+      font-size = 24;
+      indicator-idle-visible = true;
+      indicator-radius = 100;
+      line-color = "ffffff";
+      show-failed-attempts = true;
+      image = "/home/audisho/Pictures/wallpaper/swirly-blue.png";
+    };
+  };
+
+  services.swayidle = {
+    enable = true;
+    events = [
+      { event = "before-sleep"; command = "${pkgs.swaylock}/bin/swaylock -fF"; }
+      { event = "lock"; command = "lock"; }
+    ];
+    timeouts = [
+      { timeout = 60 * 5; command = "${pkgs.swaylock}/bin/swaylock -fF"; }
+      { timeout = 60 * 10; command = "${pkgs.systemd}/bin/systemctl suspend"; }
+    ];
   };
 
   wayland.windowManager.hyprland = {
