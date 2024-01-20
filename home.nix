@@ -44,7 +44,6 @@ in
       bat
       micro
       neofetch
-      nextcloud-client
       keepassxc
       android-tools
       betterdiscord-installer
@@ -124,9 +123,6 @@ in
     initExtra =
       ''
         eval "$(fnm env --use-on-cd)"
-        export PYENV_ROOT="$HOME/.pyenv"
-        [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-        eval "$(pyenv init -)"
       '';
   };
 
@@ -264,6 +260,20 @@ in
 
   # Normal LazyVim config here, see https://github.com/LazyVim/starter/tree/main/lua
   xdg.configFile."nvim/lua".source = "${neovimConfig}/lua";
+
+  # Ensures nextcloud-client system tray is "mounted"
+  systemd.user.services.nextcloud-client = {
+    Service.ExecStartPre = lib.mkForce "${pkgs.coreutils}/bin/sleep 15";
+    Unit = {
+      After = lib.mkForce [ "graphical-session.target" ];
+      PartOf = lib.mkForce [ ];
+    };
+  };
+
+  # Maintains auth for nextcloud-client
+  services.gnome-keyring.enable = true;
+
+  services.nextcloud-client.enable = true;
 
   # programs.rofi.enable = true;
   programs.wofi.enable = true;
