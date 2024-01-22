@@ -270,9 +270,6 @@ in
     };
   };
 
-  # Maintains auth for nextcloud-client
-  services.gnome-keyring.enable = true;
-
   services.nextcloud-client.enable = true;
 
   # programs.rofi.enable = true;

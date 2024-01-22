@@ -16,4 +16,6 @@
   environment.etc."greetd/environments".text = ''
     sway
   '';
+
+  security.pam.services.greetd.enableGnomeKeyring = true;
 }
