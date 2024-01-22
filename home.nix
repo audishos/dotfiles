@@ -263,7 +263,7 @@ in
 
   # Ensures nextcloud-client system tray is "mounted"
   systemd.user.services.nextcloud-client = {
-    Service.ExecStartPre = lib.mkForce "${pkgs.coreutils}/bin/sleep 15";
+    Service.ExecStartPre = lib.mkForce "${pkgs.coreutils}/bin/sleep 5";
     Unit = {
       After = lib.mkForce [ "graphical-session.target" ];
       PartOf = lib.mkForce [ ];
@@ -296,6 +296,9 @@ in
         adaptive_sync = "on";
         bg = "/home/audisho/Pictures/wallpaper/warm-strokes.png fill";
       };
+      startup = [
+        { command = "${pkgs.coreutils}/bin/sleep 5 && ${pkgs.keepassxc}/bin/keepassxc"; }
+      ];
     };
   };
 
@@ -323,7 +326,7 @@ in
       # Lock after 5 minutes
       { timeout = 60 * 5; command = "${pkgs.swaylock}/bin/swaylock -fF"; }
       # Turn off displays after 10 minutes & turn on when activity resumes
-      { timeout = 60 * 10; command = "${pkgs.sway}/bin/swaymsg output * dpms off"; resumeCommand = "${pkgs.sway}/bin/swaymsg output * dpms on"; }
+      { timeout = 60 * 10; command = "swaymsg \"output * dpms off\""; resumeCommand = "swaymsg \"output * dpms on\""; }
       # Suspend after 20 minutes
       { timeout = 60 * 20; command = "${pkgs.systemd}/bin/systemctl suspend"; }
     ];
