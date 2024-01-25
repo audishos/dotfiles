@@ -7,17 +7,13 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nixvim = {
-      url = "github:nix-community/nixvim";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     neovimConfig = {
       url = "github:audishos/neovim-config";
       flake = false;
     };
   };
 
-  outputs = inputs@{ nixpkgs, home-manager, nixvim, neovimConfig, ... }:
+  outputs = inputs@{ nixpkgs, home-manager, neovimConfig, ... }:
     let
       # system should match the system you are running on
       system = "x86_64-linux";
@@ -56,7 +52,6 @@
               # Optionally, use home-manager.extraSpecialArgs to pass
               # arguments to home.nix
               home-manager.extraSpecialArgs = {
-                nixvim = nixvim.homeManagerModules.nixvim;
                 neovimConfig = neovimConfig;
               };
             }

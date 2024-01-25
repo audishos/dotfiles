@@ -36,6 +36,8 @@
   };
 
   fonts = {
+    enableDefaultPackages = true;
+
     packages = with pkgs; [
       noto-fonts
       noto-fonts-cjk
@@ -191,4 +193,3 @@
   # Env vars
   environment.variables.MOZ_ENABLE_WAYLAND = "1";
 }
-

@@ -1,4 +1,4 @@
-{ config, lib, pkgs, nixvim, neovimConfig, ... }:
+{ config, lib, pkgs, neovimConfig, ... }:
 let
   calibreLibcryptoPatch = pkgs.calibre.overrideAttrs
     (attrs: {
@@ -330,4 +330,3 @@ in
     ];
   };
 }
-
