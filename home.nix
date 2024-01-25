@@ -176,6 +176,7 @@ in
         neoconf-nvim
         neodev-nvim
         noice-nvim
+        none-ls-nvim
         nui-nvim
         nvim-cmp
         nvim-lint

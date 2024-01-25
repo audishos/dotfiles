@@ -46,7 +46,7 @@
           system = "x86_64-linux";
           modules = [
             ./configuration.nix
-            ./greetd.nix
+            ./tuigreet.nix
             home-manager.nixosModules.home-manager
             {
               home-manager.useGlobalPkgs = true;
