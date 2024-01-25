@@ -80,7 +80,6 @@ in
       grim
       slurp
       wdisplays
-      wezterm
       calibreLibcryptoPatch
       zip
       binutils
@@ -89,14 +88,8 @@ in
       openssl
       python3
       udisks
-      # zlib
-      # libffi
-      # readline
-      # bzip2
-      # ncurses
-      # libressl
-
-      # Hyprland
+      sway-contrib.grimshot # sway screenshot tool
+      pinta # simple image editor
       kitty
     ];
   };
@@ -125,6 +118,21 @@ in
         eval "$(fnm env --use-on-cd)"
       '';
   };
+
+  programs.wezterm = {
+    enable = true;
+    extraConfig = ''
+      local wezterm = require 'wezterm'
+      local config = {}
+
+      config.color_scheme = 'Dracula (Gogh)'
+      config.window_background_opacity = 0.9
+
+      return config
+    '';
+  };
+
+  programs.hyfetch.enable = true;
 
   programs.tmux = {
     enable = true;
@@ -292,11 +300,24 @@ in
       }];
       output."*" = {
         adaptive_sync = "on";
-        bg = "/home/audisho/Pictures/wallpaper/warm-strokes.png fill";
+        bg = "/home/audisho/Pictures/wallpaper/dino-extinction.png fill";
       };
       startup = [
         { command = "${pkgs.coreutils}/bin/sleep 5 && ${pkgs.keepassxc}/bin/keepassxc"; }
       ];
+      keybindings =
+        let modifier = config.wayland.windowManager.sway.config.modifier; in lib.mkOptionDefault {
+          # Screenshots:
+          # Super+P: Current window
+          # Super+Shift+p: Select area
+          # Super+Alt+p Current output
+          # Super+Ctrl+p Select a window
+
+          "${modifier}+p" = "exec grimshot save active";
+          "${modifier}+Shift+p" = "exec grimshot save area";
+          "${modifier}+Mod1+p" = "exec grimshot save output";
+          "${modifier}+Ctrl+p" = "exec grimshot save window";
+        };
     };
   };
 
