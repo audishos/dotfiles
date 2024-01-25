@@ -323,7 +323,7 @@ in
       # Lock after 5 minutes
       { timeout = 60 * 5; command = "${pkgs.swaylock}/bin/swaylock -fF"; }
       # Turn off displays after 10 minutes & turn on when activity resumes
-      { timeout = 60 * 10; command = "swaymsg \"output * dpms off\""; resumeCommand = "swaymsg \"output * dpms on\""; }
+      { timeout = 60 * 10; command = "${pkgs.sway}/bin/swaymsg \"output * dpms off\""; resumeCommand = "${pkgs.sway}/bin/swaymsg \"output * dpms on\""; }
       # Suspend after 20 minutes
       { timeout = 60 * 20; command = "${pkgs.systemd}/bin/systemctl suspend"; }
     ];
