@@ -1,6 +1,7 @@
 return {
   {
     "nvimtools/none-ls.nvim",
+    enabled = false,
     opts = function(_, opts)
       local nls = require("null-ls")
       opts.root_dir = opts.root_dir
@@ -18,6 +19,7 @@ return {
         nls.builtins.formatting.terraform_fmt,
         nls.builtins.formatting.stylua,
         nls.builtins.formatting.shfmt,
+        nls.builtins.formatting.prettierd,
 
         -- diagnostics
         nls.builtins.diagnostics.terraform_validate,
