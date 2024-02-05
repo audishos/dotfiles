@@ -1,5 +1,5 @@
 
-{ config, lib, pkgs, neovimConfig, ... }:
+{ pkgs, ... }:
 let
   calibreLibcryptoPatch = pkgs.calibre.overrideAttrs
     (attrs: {

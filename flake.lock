@@ -56,7 +56,24 @@
       "inputs": {
         "home-manager": "home-manager",
         "neovimConfig": "neovimConfig",
-        "nixpkgs": "nixpkgs"
+        "nixpkgs": "nixpkgs",
+        "waybarConfig": "waybarConfig"
+      }
+    },
+    "waybarConfig": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1682071505,
+        "narHash": "sha256-PzWulI8Vy5932derVuwau77mW2y9LIR+5cmr9CBlHZc=",
+        "owner": "rubyowo",
+        "repo": "dotfiles",
+        "rev": "123af0706e540911da2764cb6555ad2b2dea7591",
+        "type": "github"
+      },
+      "original": {
+        "owner": "rubyowo",
+        "repo": "dotfiles",
+        "type": "github"
       }
     }
   },

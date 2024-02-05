@@ -11,9 +11,13 @@
       url = "github:audishos/neovim-config";
       flake = false;
     };
+    waybarConfig = {
+      url = "github:rubyowo/dotfiles";
+      flake = false;
+    };
   };
 
-  outputs = inputs@{ nixpkgs, home-manager, neovimConfig, ... }:
+  outputs = inputs@{ nixpkgs, home-manager, neovimConfig, waybarConfig, ... }:
     let
       # system should match the system you are running on
       system = "x86_64-linux";
@@ -53,6 +57,7 @@
               # arguments to home.nix
               home-manager.extraSpecialArgs = {
                 neovimConfig = neovimConfig;
+                waybarConfig = waybarConfig;
               };
             }
           ];

@@ -1,6 +1,9 @@
 { config, lib, pkgs, neovimConfig, ... }:
 {
-  imports = [./home/calibre.nix];
+  imports = [
+    ./home/calibre.nix
+    ./home/waybar.nix
+  ];
 
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
@@ -275,9 +278,6 @@
   # programs.rofi.enable = true;
   programs.wofi.enable = true;
 
-  programs.waybar = {
-    enable = true;
-  };
 
   wayland.windowManager.sway = {
     enable = true;
