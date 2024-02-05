@@ -1,25 +1,7 @@
 { config, lib, pkgs, neovimConfig, ... }:
-let
-  calibreLibcryptoPatch = pkgs.calibre.overrideAttrs
-    (attrs: {
-      preFixup = (
-        builtins.replaceStrings
-          [
-            ''
-              --prefix PYTHONPATH : $PYTHONPATH \
-            ''
-          ]
-          [
-            ''
-              --prefix LD_LIBRARY_PATH : ${pkgs.openssl.out}/lib:${pkgs.udisks.out} \
-              --prefix PYTHONPATH : $PYTHONPATH \
-            ''
-          ]
-          attrs.preFixup
-      );
-    });
-in
 {
+  imports = [./home/calibre.nix];
+
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
   # home.username = "audisho";
@@ -81,7 +63,6 @@ in
       grim
       slurp
       wdisplays
-      calibreLibcryptoPatch
       zip
       binutils
       ruff-lsp
@@ -94,7 +75,6 @@ in
       kitty
     ];
   };
-
 
   programs.git = {
     enable = true;
@@ -125,7 +105,7 @@ in
     extraConfig = ''
       local config = {}
 
-      config.color_scheme = 'Catppuccin Macchiato (Gogh)'
+      config.color_scheme = 'Catppuccin Mocha (Gogh)'
       config.font = wezterm.font 'Fira Code'
       config.window_background_opacity = 0.8
 
