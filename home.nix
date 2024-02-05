@@ -66,6 +66,7 @@ in
       unzip
       zig
       firefox
+      fira-code-nerdfont
       r2modman
 
       # Sway
@@ -122,11 +123,11 @@ in
   programs.wezterm = {
     enable = true;
     extraConfig = ''
-      local wezterm = require 'wezterm'
       local config = {}
 
-      config.color_scheme = 'Dracula (Gogh)'
-      config.window_background_opacity = 0.9
+      config.color_scheme = 'Catppuccin Macchiato (Gogh)'
+      config.font = wezterm.font 'Fira Code'
+      config.window_background_opacity = 0.8
 
       return config
     '';
@@ -179,10 +180,13 @@ in
         friendly-snippets
         gitsigns-nvim
         indent-blankline-nvim
+        leap-nvim
         lualine-nvim
         neo-tree-nvim
         neoconf-nvim
         neodev-nvim
+        neotest
+        neotest-jest
         noice-nvim
         none-ls-nvim
         nui-nvim
@@ -197,6 +201,7 @@ in
         nvim-ts-autotag
         nvim-ts-context-commentstring
         nvim-web-devicons
+        octo-nvim
         persistence-nvim
         plenary-nvim
         telescope-fzf-native-nvim
@@ -204,7 +209,9 @@ in
         todo-comments-nvim
         tokyonight-nvim
         trouble-nvim
+        vim-fugitive
         vim-illuminate
+        vim-rhubarb
         vim-startuptime
         which-key-nvim
         { name = "LuaSnip"; path = luasnip; }
@@ -240,9 +247,13 @@ in
           -- import any extras modules here
           { import = "lazyvim.plugins.extras.lang.typescript" },
           { import = "lazyvim.plugins.extras.lang.json" },
-          { import = "lazyvim.plugins.extras.linting.eslint" },
-          { import = "lazyvim.plugins.extras.formatting.prettier" },
+          -- { import = "lazyvim.plugins.extras.linting.eslint" },
+          -- { import = "lazyvim.plugins.extras.formatting.prettier" },
           { import = "lazyvim.plugins.extras.util.dot" },
+          { import = "lazyvim.plugins.extras.ui.mini-animate" },
+          { import = "lazyvim.plugins.extras.lsp.none-ls" },
+          { import = "lazyvim.plugins.extras.editor.leap" },
+          { import = "lazyvim.plugins.extras.test.core" },
           -- The following configs are needed for fixing lazyvim on nix
           -- force enable telescope-fzf-native.nvim
           { "nvim-telescope/telescope-fzf-native.nvim", enabled = true },
@@ -298,6 +309,14 @@ in
       bars = [{
         command = "waybar";
       }];
+      gaps = {
+        inner = 8;
+        smartBorders = "on";
+        smartGaps = true;
+      };
+      window = {
+          titlebar = false;
+      };
       output."*" = {
         adaptive_sync = "on";
         bg = "/home/audisho/Pictures/wallpaper/dino-extinction.png fill";
