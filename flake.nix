@@ -12,7 +12,7 @@
       flake = false;
     };
     waybarConfig = {
-      url = "github:rubyowo/dotfiles";
+      url = "github:rubyowo/dotfiles/main";
       flake = false;
     };
   };

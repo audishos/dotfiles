@@ -7,11 +7,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1707172926,
-        "narHash": "sha256-EPVFupuUcSgZ9HD9T+kGVCPeAcZBtByT5f5iEZw23/A=",
+        "lastModified": 1707175763,
+        "narHash": "sha256-0MKHC6tQ4KEuM5rui6DjKZ/VNiSANB4E+DJ/+wPS1PU=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "f65dcd6c15db0fc2045d56ef8fdf4a03aa52e81f",
+        "rev": "f99eace7c167b8a6a0871849493b1c613d0f1b80",
         "type": "github"
       },
       "original": {
@@ -63,15 +63,16 @@
     "waybarConfig": {
       "flake": false,
       "locked": {
-        "lastModified": 1682071505,
-        "narHash": "sha256-PzWulI8Vy5932derVuwau77mW2y9LIR+5cmr9CBlHZc=",
+        "lastModified": 1669636100,
+        "narHash": "sha256-YqhrlZF3TIpazvLMyZoWDJ6yUMqM9qRD4dD6MwmH1As=",
         "owner": "rubyowo",
         "repo": "dotfiles",
-        "rev": "123af0706e540911da2764cb6555ad2b2dea7591",
+        "rev": "68ffcae19950270b374342884730936cf9aad4f2",
         "type": "github"
       },
       "original": {
         "owner": "rubyowo",
+        "ref": "main",
         "repo": "dotfiles",
         "type": "github"
       }

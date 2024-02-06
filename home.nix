@@ -53,6 +53,7 @@
       firefox
       fira-code-nerdfont
       r2modman
+      statix
 
       # Sway
       wl-clipboard
@@ -295,7 +296,7 @@
         smartGaps = true;
       };
       window = {
-          titlebar = false;
+        titlebar = false;
       };
       output."*" = {
         adaptive_sync = "on";
