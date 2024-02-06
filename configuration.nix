@@ -9,6 +9,7 @@
       # Include the results of the hardware scan.
       ./hardware-configuration.nix
       # ./home-manager.nix
+      ./system/fonts.nix
     ];
 
   # Use the systemd-boot EFI boot loader.
@@ -18,7 +19,7 @@
   networking.hostName = "chungus"; # Define your hostname.
   # Pick only one of the below networking options.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-  networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
+  networking.networkmanager.enable = true; # Easiest to use and most distros use this by default.
 
   # Set your time zone.
   time.timeZone = "America/Toronto";
@@ -33,31 +34,6 @@
     font = "Lat2-Terminus16";
     keyMap = lib.mkDefault "us";
     useXkbConfig = true; # use xkbOptions in tty.
-  };
-
-  fonts = {
-    enableDefaultPackages = true;
-
-    packages = with pkgs; [
-      noto-fonts
-      noto-fonts-cjk
-      noto-fonts-emoji
-      font-awesome
-      liberation_ttf
-      fira-code
-      fira-code-symbols
-      mplus-outline-fonts.githubRelease
-      dina-font
-      proggyfonts
-      source-han-sans
-      source-han-sans-japanese
-      source-han-serif-japanese
-    ];
-
-    fontconfig.defaultFonts = {
-      serif = [ "Noto Serif" "Source Han Serif" ];
-      sansSerif = [ "Noto Sans" "Source Han Sans" ];
-    };
   };
 
   # Enable zsh
