@@ -16,7 +16,7 @@
       source-han-sans-japanese
       source-han-serif-japanese
       (nerdfonts.override {
-        fonts = [ "FiraCode", "FantasqueSansMono" ];
+        fonts = [ "FiraCode" "FantasqueSansMono" ];
       })
     ];
 

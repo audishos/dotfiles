@@ -11,13 +11,13 @@
       url = "github:audishos/neovim-config";
       flake = false;
     };
-    waybarConfig = {
-      url = "github:rubyowo/dotfiles/main";
+    catppuccinWaybar = {
+      url = "github:catppuccin/waybar";
       flake = false;
     };
   };
 
-  outputs = inputs@{ nixpkgs, home-manager, neovimConfig, waybarConfig, ... }:
+  outputs = inputs@{ nixpkgs, home-manager, neovimConfig, catppuccinWaybar, ... }:
     let
       # system should match the system you are running on
       system = "x86_64-linux";
@@ -56,8 +56,8 @@
               # Optionally, use home-manager.extraSpecialArgs to pass
               # arguments to home.nix
               home-manager.extraSpecialArgs = {
-                neovimConfig = neovimConfig;
-                waybarConfig = waybarConfig;
+                inherit neovimConfig;
+                inherit catppuccinWaybar;
               };
             }
           ];

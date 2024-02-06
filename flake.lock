@@ -1,5 +1,21 @@
 {
   "nodes": {
+    "catppuccinWaybar": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1678438606,
+        "narHash": "sha256-WLJMA2X20E5PCPg0ZPtSop0bfmu+pLImP9t8A8V4QK8=",
+        "owner": "catppuccin",
+        "repo": "waybar",
+        "rev": "f74ab1eecf2dcaf22569b396eed53b2b2fbe8aff",
+        "type": "github"
+      },
+      "original": {
+        "owner": "catppuccin",
+        "repo": "waybar",
+        "type": "github"
+      }
+    },
     "home-manager": {
       "inputs": {
         "nixpkgs": [
@@ -54,27 +70,10 @@
     },
     "root": {
       "inputs": {
+        "catppuccinWaybar": "catppuccinWaybar",
         "home-manager": "home-manager",
         "neovimConfig": "neovimConfig",
-        "nixpkgs": "nixpkgs",
-        "waybarConfig": "waybarConfig"
-      }
-    },
-    "waybarConfig": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1669636100,
-        "narHash": "sha256-YqhrlZF3TIpazvLMyZoWDJ6yUMqM9qRD4dD6MwmH1As=",
-        "owner": "rubyowo",
-        "repo": "dotfiles",
-        "rev": "68ffcae19950270b374342884730936cf9aad4f2",
-        "type": "github"
-      },
-      "original": {
-        "owner": "rubyowo",
-        "ref": "main",
-        "repo": "dotfiles",
-        "type": "github"
+        "nixpkgs": "nixpkgs"
       }
     }
   },

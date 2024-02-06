@@ -3,6 +3,7 @@
   imports = [
     ./home/calibre.nix
     ./home/waybar.nix
+    ./home/wezterm.nix
   ];
 
   # Home Manager needs a bit of information about you and the
@@ -102,19 +103,6 @@
       ''
         eval "$(fnm env --use-on-cd)"
       '';
-  };
-
-  programs.wezterm = {
-    enable = true;
-    extraConfig = ''
-      local config = {}
-
-      config.color_scheme = 'Catppuccin Mocha (Gogh)'
-      config.font = wezterm.font 'Fira Code'
-      config.window_background_opacity = 0.8
-
-      return config
-    '';
   };
 
   programs.hyfetch.enable = true;
