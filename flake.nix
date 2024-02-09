@@ -42,7 +42,7 @@
         };
       # {
       nixosConfigurations = {
-        chungus = nixpkgs.lib.nixosSystem {
+        stalingrad = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
           modules = [
             ./configuration.nix

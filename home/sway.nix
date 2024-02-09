@@ -13,7 +13,6 @@
       gaps = {
         inner = 8;
         smartBorders = "on";
-        # smartGaps = true;
       };
       window = {
         titlebar = false;
