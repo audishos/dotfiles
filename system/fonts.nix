@@ -4,6 +4,7 @@
     enableDefaultPackages = true;
 
     packages = with pkgs; [
+      symbola
       noto-fonts
       noto-fonts-cjk
       noto-fonts-emoji
