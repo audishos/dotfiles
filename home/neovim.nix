@@ -150,5 +150,6 @@ in
     prettierd
     lazygit
     statix
+    selene
   ];
 }
