@@ -25,7 +25,7 @@
         { command = "${pkgs.coreutils}/bin/sleep 5 && ${pkgs.keepassxc}/bin/keepassxc"; }
       ];
       keybindings =
-        let modifier = config.wayland.windowManager.sway.config.modifier; in lib.mkOptionDefault {
+        let inherit (config.wayland.windowManager.sway.config) modifier; in lib.mkOptionDefault {
           # Screenshots:
           # Super+P: Current window
           # Super+Shift+p: Select area
