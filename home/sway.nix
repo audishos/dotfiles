@@ -19,7 +19,7 @@
       };
       output."*" = {
         adaptive_sync = "on";
-        bg = "/home/audisho/Pictures/wallpaper/dino-extinction.png fill";
+        bg = "/home/audisho/Pictures/wallpaper/aizhai_bridge-2.jpg fill";
       };
       startup = [
         { command = "${pkgs.coreutils}/bin/sleep 5 && ${pkgs.keepassxc}/bin/keepassxc"; }
