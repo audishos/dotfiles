@@ -13,8 +13,14 @@
     ];
 
   # Use the systemd-boot EFI boot loader.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
+  boot.loader = {
+    efi.canTouchEfiVariables = true;
+
+    systemd-boot = {
+      enable = true;
+      configurationLimit = 15;
+    };
+  };
 
   networking.hostName = "stalingrad"; # Define your hostname.
   # Pick only one of the below networking options.
