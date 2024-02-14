@@ -37,6 +37,20 @@
           "${modifier}+Mod1+p" = "exec grimshot save output";
           "${modifier}+Ctrl+p" = "exec grimshot save window";
         };
+      floating = {
+        criteria = [
+          {
+            app_id = "org.keepassxc.KeePassXC";
+          }
+          {
+            app_id = "com.nextcloud.desktopclient.nextcloud";
+          }
+          {
+            app_id = "pavucontrol";
+          }
+        ];
+        titlebar = true;
+      };
     };
   };
 
