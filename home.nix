@@ -8,6 +8,7 @@
     ./home/wezterm.nix
     ./home/neovim.nix
     ./home/wofi.nix
+    ./home/nextcloud.nix
   ];
 
   # Home Manager needs a bit of information about you and the
@@ -105,23 +106,4 @@
   };
 
   programs.hyfetch.enable = true;
-
-  programs.tmux = {
-    enable = true;
-    keyMode = "vi";
-    shortcut = "a";
-    terminal = "screen256color";
-    shell = "/etc/profiles/per-user/audisho/bin/zsh";
-  };
-
-  # Ensures nextcloud-client system tray is "mounted"
-  systemd.user.services.nextcloud-client = {
-    Service.ExecStartPre = lib.mkForce "${pkgs.coreutils}/bin/sleep 5";
-    Unit = {
-      After = lib.mkForce [ "graphical-session.target" ];
-      PartOf = lib.mkForce [ ];
-    };
-  };
-
-  services.nextcloud-client.enable = true;
 }
