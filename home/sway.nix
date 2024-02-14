@@ -49,6 +49,8 @@
             app_id = "pavucontrol";
           }
         ];
+        # this floating titlebar option doesn't work
+        # it seems that the window.titlebar option overrides it
         titlebar = true;
       };
     };
