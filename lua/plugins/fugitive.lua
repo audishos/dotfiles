@@ -1,6 +1,7 @@
 return {
   {
-    url = "https://tpope.io/vim/fugitive.git",
+    "tpope/vim-fugitive",
+    lazy = false,
     dependencies = { "tpope/vim-rhubarb" }, -- needed for :GBrowse
   },
 }

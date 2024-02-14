@@ -9,11 +9,11 @@ return {
       opts.sources = vim.list_extend(opts.sources or {}, {
         -- code actions
         nls.builtins.code_actions.statix,
-        nls.builtins.code_actions.eslint_d,
+        -- nls.builtins.code_actions.eslint_d,
         nls.builtins.code_actions.gitsigns,
 
         -- formatting
-        nls.builtins.formatting.eslint_d,
+        -- nls.builtins.formatting.eslint_d,
         nls.builtins.formatting.markdownlint,
         nls.builtins.formatting.nixpkgs_fmt,
         nls.builtins.formatting.terraform_fmt,
@@ -22,8 +22,9 @@ return {
         nls.builtins.formatting.prettierd,
 
         -- diagnostics
+        -- nls.builtins.diagnostics.tsc,
         nls.builtins.diagnostics.terraform_validate,
-        nls.builtins.diagnostics.eslint_d,
+        -- nls.builtins.diagnostics.eslint_d,
         nls.builtins.diagnostics.markdownlint,
         nls.builtins.diagnostics.protolint,
         nls.builtins.diagnostics.statix,
