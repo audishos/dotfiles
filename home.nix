@@ -78,6 +78,7 @@
       udisks
       sway-contrib.grimshot # sway screenshot tool
       pinta # simple image editor
+      deluge-gtk
     ];
   };
 
