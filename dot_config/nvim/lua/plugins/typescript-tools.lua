@@ -2,6 +2,7 @@ return {
   {
     "pmizio/typescript-tools.nvim",
     enabled = true,
+    lazy = false,
     dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
     opts = {
       settings = {
