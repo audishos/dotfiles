@@ -1,7 +1,7 @@
 return {
   {
     "nvimtools/none-ls.nvim",
-    enabled = true,
+    enabled = false,
     opts = function(_, opts)
       local nls = require("null-ls")
       opts.root_dir = opts.root_dir
