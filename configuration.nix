@@ -134,9 +134,14 @@
     samba
     cifs-utils
     gnumake
+    wineWowPackages.stable
   ];
 
   programs.steam.enable = true;
+  environment.sessionVariables = {
+    DOTNET_ROOT = "${pkgs.dotnet-sdk}";
+  };
+
   services.udev.packages = with pkgs; [ mixxx ];
   services.flatpak.enable = true;
   services.udisks2.enable = true;

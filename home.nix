@@ -9,6 +9,8 @@
     ./home/neovim.nix
     ./home/wofi.nix
     ./home/nextcloud.nix
+    ./home/git.nix
+    ./home/zsh.nix
   ];
 
   # Home Manager needs a bit of information about you and the
@@ -42,9 +44,12 @@
       nodejs
       nodePackages_latest.pnpm
       fnm
-      discord
+      (discord.override {
+        withVencord = true;
+      })
       steam-tui
       steamcmd
+      mono
       audacity
       gnome.nautilus
       spotify
@@ -82,29 +87,21 @@
     ];
   };
 
-  programs.git = {
-    enable = true;
-    package = pkgs.gitAndTools.gitFull;
-    userName = "audishos";
-    userEmail = "audisho.sada@gmail.com";
-  };
+  programs = {
+    hyfetch.enable = true;
 
-  programs.zsh = {
-    enable = true;
-    enableVteIntegration = true;
-    oh-my-zsh = {
+    # smart cd (remembers common paths)
+    # https://github.com/ajeetdsouza/zoxide
+    zoxide = {
       enable = true;
-      plugins = [
-        "git"
-        "fnm"
-      ];
-      theme = "robbyrussell";
+      enableBashIntegration = true;
+      enableZshIntegration = true;
     };
-    initExtra =
-      ''
-        eval "$(fnm env --use-on-cd)"
-      '';
-  };
 
-  programs.hyfetch.enable = true;
+    # terminal file manager
+    # https://github.com/jarun/nnn
+    nnn = {
+      enable = true;
+    };
+  };
 }
