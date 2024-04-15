@@ -1,0 +1,82 @@
+{
+  "nodes": {
+    "catppuccinWaybar": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1711907468,
+        "narHash": "sha256-9lY+v1CTbpw2lREG/h65mLLw5KuT8OJdEPOb+NNC6Fo=",
+        "owner": "catppuccin",
+        "repo": "waybar",
+        "rev": "0830796af6aa64ce8bc7453d42876a628777ac68",
+        "type": "github"
+      },
+      "original": {
+        "owner": "catppuccin",
+        "repo": "waybar",
+        "type": "github"
+      }
+    },
+    "home-manager": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1712462372,
+        "narHash": "sha256-WA3bbBWhd3o1wAgyHZNypjb/LG4oq+IWxFq8ey8yNPU=",
+        "owner": "nix-community",
+        "repo": "home-manager",
+        "rev": "a561ad6ab38578c812cc9af3b04f2cc60ebf48c9",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "repo": "home-manager",
+        "type": "github"
+      }
+    },
+    "neovimConfig": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1708115070,
+        "narHash": "sha256-0QLWM+dNGfF5BgABEw0dn6qaPHkfiEViuDvrshFQx24=",
+        "owner": "audishos",
+        "repo": "neovim-config",
+        "rev": "e68d4823aade09579eb0d4a123ead3f00d58f4cb",
+        "type": "github"
+      },
+      "original": {
+        "owner": "audishos",
+        "repo": "neovim-config",
+        "type": "github"
+      }
+    },
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1712439257,
+        "narHash": "sha256-aSpiNepFOMk9932HOax0XwNxbA38GOUVOiXfUVPOrck=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "ff0dbd94265ac470dda06a657d5fe49de93b4599",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "root": {
+      "inputs": {
+        "catppuccinWaybar": "catppuccinWaybar",
+        "home-manager": "home-manager",
+        "neovimConfig": "neovimConfig",
+        "nixpkgs": "nixpkgs"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}
