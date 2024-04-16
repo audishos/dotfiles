@@ -103,5 +103,7 @@
     nnn = {
       enable = true;
     };
+
+    gh.enable = true;
   };
 }
