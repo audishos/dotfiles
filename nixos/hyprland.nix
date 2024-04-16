@@ -1,4 +1,4 @@
-{ config, lib, pkgs, nixvim, neovimConfig, ... }:
+{ config, lib, pkgs, nixvim, ... }:
 {
   wayland.windowManager.hyprland = {
     enable = true;

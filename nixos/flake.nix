@@ -7,17 +7,13 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    neovimConfig = {
-      url = "github:audishos/neovim-config";
-      flake = false;
-    };
     catppuccinWaybar = {
       url = "github:catppuccin/waybar";
       flake = false;
     };
   };
 
-  outputs = inputs@{ nixpkgs, home-manager, neovimConfig, catppuccinWaybar, ... }:
+  outputs = inputs@{ nixpkgs, home-manager, catppuccinWaybar, ... }:
     let
       # system should match the system you are running on
       system = "x86_64-linux";
@@ -56,7 +52,7 @@
               # Optionally, use home-manager.extraSpecialArgs to pass
               # arguments to home.nix
               home-manager.extraSpecialArgs = {
-                inherit neovimConfig catppuccinWaybar;
+                inherit catppuccinWaybar;
               };
             }
           ];
