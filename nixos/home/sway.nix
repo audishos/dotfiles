@@ -6,7 +6,7 @@
     config = rec {
       modifier = "Mod4";
       terminal = "kitty";
-      menu = "wofi --show drun --allow-images";
+      menu = "wofi --show drun,run --allow-images";
       bars = [{
         command = "waybar";
       }];
