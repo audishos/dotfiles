@@ -45,7 +45,11 @@
       nodejs
       nodePackages_latest.pnpm
       fnm
+      # (discord.override {
+      #   withVencord = true;
+      # })
       webcord-vencord
+      vesktop
       steam-tui
       steamcmd
       mono
