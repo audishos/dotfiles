@@ -11,6 +11,7 @@
     ./home/nextcloud.nix
     ./home/git.nix
     ./home/zsh.nix
+    ./home/obs.nix
   ];
 
   # Home Manager needs a bit of information about you and the
