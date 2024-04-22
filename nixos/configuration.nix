@@ -45,8 +45,17 @@
   # Enable zsh
   programs.zsh.enable = true;
 
-  # Experiemental features
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix = {
+    # Experiemental features
+    settings.experimental-features = [ "nix-command" "flakes" ];
+
+    # Automatic garbage collection
+    gc = {
+      automatic = true;
+      dates = "weekly";
+      persistent = true;
+    };
+  };
 
   # Enable the X11 windowing system.
   # services.xserver.enable = true;
