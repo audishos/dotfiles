@@ -12,6 +12,8 @@
     ./home/git.nix
     ./home/zsh.nix
     ./home/obs.nix
+    ./home/default-applications.nix
+    # ./home/qt.nix
   ];
 
   # Home Manager needs a bit of information about you and the

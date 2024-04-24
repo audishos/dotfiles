@@ -3,6 +3,9 @@
   wayland.windowManager.sway = {
     enable = true;
 
+    # Required because bg file check fails 😢
+    checkConfig = false;
+
     config = rec {
       modifier = "Mod4";
       terminal = "kitty";
@@ -19,7 +22,7 @@
       };
       output."*" = {
         adaptive_sync = "on";
-        # bg = "${config.home.homeDirectory}/Pictures/wallpaper/aizhai_bridge-2.jpg fill";
+        bg = "${config.home.homeDirectory}/Pictures/wallpaper/aizhai_bridge-2.jpg fill";
       };
       startup = [
         { command = "${pkgs.coreutils}/bin/sleep 5 && ${pkgs.keepassxc}/bin/keepassxc"; }
