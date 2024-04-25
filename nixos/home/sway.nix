@@ -13,6 +13,7 @@
       bars = [{
         command = "waybar";
       }];
+      defaultWorkspace = "workspace number 1";
       gaps = {
         inner = 8;
         smartBorders = "on";
@@ -27,6 +28,12 @@
       startup = [
         { command = "${pkgs.coreutils}/bin/sleep 5 && ${pkgs.keepassxc}/bin/keepassxc"; }
       ];
+      input = {
+        "*" = {
+          repeat_delay = "200";
+          repeat_rate = "30";
+        };
+      };
       keybindings =
         let inherit (config.wayland.windowManager.sway.config) modifier; in lib.mkOptionDefault {
           # Screenshots:

@@ -89,6 +89,10 @@
       sway-contrib.grimshot # sway screenshot tool
       pinta # simple image editor
       deluge-gtk
+      streamlink
+      streamlink-twitch-gui-bin
+      qpdfview
+      libreoffice-fresh
     ];
   };
 
