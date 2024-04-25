@@ -189,17 +189,18 @@
       @import "mocha.css";
 
       * {
-        font-family: FiraCode Nerd Font Mono;
-        font-size: 1.1rem;
+        font-family: SpaceMono Nerd Font Mono;
+        font-size: 1rem;
+        font-weight: 700;
       }
 
       .modules-left,
       .modules-center,
       .modules-right {
         background-color: @base;
-        margin: 0 16px;
+        margin: 0 8px;
         padding: 0 16px;
-        border-radius: 24px;
+        border-radius: 12px;
       }
 
       window#waybar {
@@ -209,7 +210,7 @@
 
       #workspaces button {
         color: @text;
-        border-radius: 32px;
+        border-radius: 64px;
       }
 
       #workspaces button.focused,
@@ -217,7 +218,7 @@
       #workspaces button.visible {
         background-color: @green;
         color: @crust;
-        box-shadow: inset 0 -4px @maroon;
+        margin: 4px 0;
       }
 
       #idle_inhibitor {
