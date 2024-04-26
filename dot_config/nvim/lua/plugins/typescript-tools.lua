@@ -1,7 +1,7 @@
 return {
   {
     "pmizio/typescript-tools.nvim",
-    enabled = true,
+    enabled = false,
     lazy = false,
     dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
     opts = {
@@ -15,4 +15,16 @@ return {
       },
     },
   },
+  -- {
+  --   "williamboman/mason-lspconfig.nvim",
+  --   opts = {
+  --     handlers = {
+  --       function(server_name)
+  --         if server_name == "tsserver" then
+  --           return
+  --         end
+  --       end,
+  --     },
+  --   },
+  -- },
 }
