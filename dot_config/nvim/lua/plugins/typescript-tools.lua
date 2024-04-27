@@ -20,6 +20,11 @@ return {
           -- or for older TypeScript versions
           -- "typescript-styled-plugin",
         },
+        -- https://github.com/microsoft/TypeScript/blob/v5.0.4/src/server/protocol.ts#L3439
+        tsserver_file_preferences = {
+          -- 🤞hoping this fixes renaming imports to NOT use alias `import { foo as bar } ...` ❌
+          providePrefixAndSuffixTextForRename = true,
+        },
       },
     },
   },
@@ -28,6 +33,7 @@ return {
     opts = {
       handlers = {
         function(server_name)
+          -- prevents mason from auto-installing tsserver
           if server_name == "tsserver" then
             return
           end
