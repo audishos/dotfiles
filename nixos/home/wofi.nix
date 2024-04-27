@@ -9,7 +9,7 @@
       }
 
       #input {
-        font-family: FiraCode Nerd Font, Noto Sans;
+        font-family: SpaceMono Nerd Font Mono, Noto Sans;
         font-size: 20px;
         font-weight: bold;
         margin: 16px;
@@ -31,7 +31,7 @@
       }
 
       #text {
-        font-family: FiraCode Nerd Font, Noto Sans;
+        font-family: SpaceMono Nerd Font Mono, Noto Sans;
         font-size: 20px;
         font-weight: bold;
         margin: 16px;
