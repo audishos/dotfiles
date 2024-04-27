@@ -44,4 +44,11 @@ return {
       table.insert(opts.sources, { name = "emoji" })
     end,
   },
+  {
+    "L3MON4D3/LuaSnip",
+    keys = function()
+      -- disables <tab> & <s-tab> for supertab compatibility
+      return {}
+    end,
+  },
 }
