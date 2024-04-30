@@ -211,6 +211,7 @@
       #workspaces button {
         color: @text;
         border-radius: 64px;
+        margin: 4px 0;
       }
 
       #workspaces button.focused,
@@ -218,7 +219,6 @@
       #workspaces button.visible {
         background-color: @green;
         color: @crust;
-        margin: 4px 0;
       }
 
       #idle_inhibitor {
