@@ -6,7 +6,7 @@
     # Required because bg file check fails 😢
     checkConfig = false;
 
-    config = rec {
+    config = {
       modifier = "Mod4";
       terminal = "kitty";
       menu = "wofi --show run,drun --allow-images";
