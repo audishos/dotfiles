@@ -6,7 +6,7 @@
     # Required because bg file check fails 😢
     checkConfig = false;
 
-    config = {
+    config = rec {
       modifier = "Mod4";
       terminal = "kitty";
       menu = "wofi --show run,drun --allow-images";
@@ -35,7 +35,7 @@
         };
       };
       keybindings =
-        let inherit (config.wayland.windowManager.sway.config) modifier; in lib.mkOptionDefault {
+        lib.mkOptionDefault {
           # Screenshots:
           # Super+P: Current window
           # Super+Shift+p: Select area
