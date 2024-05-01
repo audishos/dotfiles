@@ -34,19 +34,18 @@
           repeat_rate = "30";
         };
       };
-      keybindings =
-        lib.mkOptionDefault {
-          # Screenshots:
-          # Super+P: Current window
-          # Super+Shift+p: Select area
-          # Super+Alt+p Current output
-          # Super+Ctrl+p Select a window
+      keybindings = lib.mkOptionDefault {
+        # Screenshots:
+        # Super+P: Current window
+        # Super+Shift+p: Select area
+        # Super+Alt+p Current output
+        # Super+Ctrl+p Select a window
 
-          "${modifier}+p" = "exec grimshot save active";
-          "${modifier}+Shift+p" = "exec grimshot save area";
-          "${modifier}+Mod1+p" = "exec grimshot save output";
-          "${modifier}+Ctrl+p" = "exec grimshot save window";
-        };
+        "${modifier}+p" = "exec grimshot save active";
+        "${modifier}+Shift+p" = "exec grimshot save area";
+        "${modifier}+Mod1+p" = "exec grimshot save output";
+        "${modifier}+Ctrl+p" = "exec grimshot save window";
+      };
       floating = {
         criteria = [
           {
@@ -59,9 +58,6 @@
             app_id = "pavucontrol";
           }
         ];
-        # this floating titlebar option doesn't work
-        # it seems that the window.titlebar option overrides it
-        titlebar = true;
       };
     };
   };
