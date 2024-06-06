@@ -112,18 +112,14 @@
     options v4l2loopback devices=1 video_nr=1 card_label="OBS Cam" exclusive_caps=1
   '';
 
-  #environment.etc = {
-  #  "pipewire/pipewire.conf.d/92-low-latency.conf".text = ''
-  #    context.properties = {
-  #      default.clock.rate = 48000
-  #      default.clock.allowed-rates = [ 48000 96000 ]
-  #      default.clock.quantum = 2048
-  #      default.clock.min-quantum = 16
-  #      default.clock.max-quantum = 4096
-  #      default.clock.quantum-limit = 8192
-  #    }
-  #  '';
-  #};
+  services.pipewire.extraConfig.pipewire."92-low-latency" = {
+    context.properties = {
+      default.clock.rate = 48000;
+      default.clock.quantum = 32;
+      default.clock.min-quantum = 32;
+      default.clock.max-quantum = 32;
+    };
+  };
 
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
@@ -171,6 +167,9 @@
     enable = true;
     enableSSHSupport = true;
   };
+
+  # GTK daemon for accessing samba shares
+  services.gvfs.enable = true;
 
   # List services that you want to enable:
 
