@@ -66,7 +66,9 @@
       firefox
       # fira-code-nerdfont not sure if this is needed due to system fonts config
       r2modman
-
+      bubblewrap
+      fuse-overlayfs
+      dwarfs
       # Sway
       wl-clipboard
       mako
