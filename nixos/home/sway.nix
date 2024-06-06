@@ -23,7 +23,7 @@
       };
       output."*" = {
         adaptive_sync = "on";
-        bg = "${config.home.homeDirectory}/Pictures/wallpaper/aizhai_bridge-2.jpg fill";
+        bg = "${config.home.homeDirectory}/Pictures/wallpaper/wulingyuan_scenic_area_china.png fill";
       };
       startup = [
         { command = "${pkgs.coreutils}/bin/sleep 5 && ${pkgs.keepassxc}/bin/keepassxc"; }
