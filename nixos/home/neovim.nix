@@ -80,6 +80,7 @@ in
       lua-language-server
       stylua
       nodePackages.typescript-language-server
+      nodePackages.bash-language-server
       nixpkgs-fmt
       # Telescope
       ripgrep
