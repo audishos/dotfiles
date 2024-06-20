@@ -1,3 +1,8 @@
+if true then
+  -- disabled in favor of LazyVim extra for now
+  return {}
+end
+
 return {
   {
     "stevearc/conform.nvim",
