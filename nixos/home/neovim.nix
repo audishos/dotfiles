@@ -115,7 +115,7 @@ in
           spec = {
             { "LazyVim/LazyVim", import = "lazyvim.plugins" },
             -- import any extras modules here
-            -- { import = "lazyvim.plugins.extras.lang.typescript" },
+            { import = "lazyvim.plugins.extras.lang.typescript" },
             { import = "lazyvim.plugins.extras.lang.json" },
             { import = "lazyvim.plugins.extras.lang.python" },
             { import = "lazyvim.plugins.extras.linting.eslint" },
@@ -124,9 +124,12 @@ in
             { import = "lazyvim.plugins.extras.lang.docker" },
             { import = "lazyvim.plugins.extras.lang.terraform" },
             { import = "lazyvim.plugins.extras.util.dot" },
+            { import = "lazyvim.plugins.extras.coding.mini-surround" },
             { import = "lazyvim.plugins.extras.ui.mini-animate" },
             { import = "lazyvim.plugins.extras.editor.leap" },
+            { import = "lazyvim.plugins.extras.util.octo" },
             { import = "lazyvim.plugins.extras.test.core" },
+            { import = "lazyvim.plugins.extras.dap.core" },
             -- The following configs are needed for fixing lazyvim on nix
             -- force enable telescope-fzf-native.nvim
             { "nvim-telescope/telescope-fzf-native.nvim", enabled = true },

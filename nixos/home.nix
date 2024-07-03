@@ -84,7 +84,6 @@
       zip
       binutils
       ruff-lsp
-      nodePackages.pyright
       openssl
       python3
       udisks
