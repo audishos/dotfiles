@@ -39,16 +39,13 @@
       httpie
       bat
       micro
-      neofetch
       keepassxc
       android-tools
-      betterdiscord-installer
-      betterdiscordctl
       nodejs
       nodePackages_latest.pnpm
       fnm
       # (discord.override {
-      #   withVencord = true;
+      #   withOpenASAR = true;
       # })
       webcord-vencord
       vesktop
@@ -56,9 +53,9 @@
       steamcmd
       mono
       audacity
-      gnome.nautilus
+      nautilus
       spotify
-      gnome.cheese
+      cheese
       fd
       rust-analyzer-unwrapped
       unzip
@@ -77,7 +74,7 @@
       xdg-utils
       glib
       dracula-theme
-      gnome3.adwaita-icon-theme
+      adwaita-icon-theme
       grim
       slurp
       wdisplays

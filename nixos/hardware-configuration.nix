@@ -55,8 +55,8 @@
     ];
   };
 
-  # environment.variables.AMD_VULKAN_ICD = "AMDVLK";
-  environment.variables.AMD_VULKAN_ICD = "RADV";
+  environment.variables.AMD_VULKAN_ICD = "AMDVLK";
+  # environment.variables.AMD_VULKAN_ICD = "RADV";
 
   # enables HIP -> https://wiki.nixos.org/wiki/AMD_GPU
   systemd.tmpfiles.rules = [
