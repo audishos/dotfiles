@@ -1,4 +1,4 @@
-{ config, lib, pkgs, ... }:
+{ pkgs, ... }:
 {
   imports = [
     ./home/sway.nix
@@ -13,6 +13,7 @@
     ./home/zsh.nix
     ./home/obs.nix
     ./home/default-applications.nix
+    ./home/vesktop.nix
     # ./home/qt.nix
   ];
 
@@ -44,11 +45,6 @@
       nodejs
       nodePackages_latest.pnpm
       fnm
-      # (discord.override {
-      #   withOpenASAR = true;
-      # })
-      webcord-vencord
-      vesktop
       steam-tui
       steamcmd
       mono
@@ -61,12 +57,10 @@
       unzip
       zig
       firefox
-      # fira-code-nerdfont not sure if this is needed due to system fonts config
       r2modman
       bubblewrap
       fuse-overlayfs
       dwarfs
-      # Sway
       wl-clipboard
       mako
       alacritty
