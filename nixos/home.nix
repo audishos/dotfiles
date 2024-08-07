@@ -13,8 +13,9 @@
     ./home/zsh.nix
     ./home/obs.nix
     ./home/default-applications.nix
-    ./home/vesktop.nix
-    # ./home/qt.nix
+    ./home/electron-apps.nix
+    ./home/spotify.nix
+    ./home/qt.nix
   ];
 
   # Home Manager needs a bit of information about you and the
@@ -50,7 +51,6 @@
       mono
       audacity
       nautilus
-      spotify
       cheese
       fd
       rust-analyzer-unwrapped
@@ -85,6 +85,9 @@
       streamlink-twitch-gui-bin
       qpdfview
       libreoffice-fresh
+      htop
+      btop
+      telegram-desktop
     ];
   };
 
