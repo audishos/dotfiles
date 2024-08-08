@@ -1,20 +1,21 @@
 { pkgs, ... }:
 {
-  # home = {
-  #   sessionVariables = {
-  #     QT_QPA_PLATFORMTHEME = lib.mkForce "qtct";
-  #     QT_QPA_PLATFORM = "wayland";
-  #     QT_WAYLAND_DISABLE_WINDOWDECORATION = "1";
-  #     QT_AUTO_SCREEN_SCALE_FACTOR = "1";
-  #   };
-  # };
+  # home.sessionVariables.QT_QPA_PLATFORMTHEME = "qt5ct";
 
   qt = {
     enable = true;
-    platformTheme.name = "adwaita";
-    style = {
-      package = pkgs.adwaita-qt;
-      name = "adwaita";
-    };
+    platformTheme.name = "qtct";
+    style.package = pkgs.catppuccin-qt5ct;
   };
+
+  xdg.configFile = {
+    "qt5ct/colors/Catppuccin-Frappe.conf".source = "${pkgs.catppuccin-qt5ct}/share/qt5ct/colors/Catppuccin-Frappe.conf";
+    "qt5ct/colors/Catppuccin-Latte.conf".source = "${pkgs.catppuccin-qt5ct}/share/qt5ct/colors/Catppuccin-Latte.conf";
+    "qt5ct/colors/Catppuccin-Macchiato.conf".source = "${pkgs.catppuccin-qt5ct}/share/qt5ct/colors/Catppuccin-Macchiato.conf";
+    "qt5ct/colors/Catppuccin-Mocha.conf".source = "${pkgs.catppuccin-qt5ct}/share/qt5ct/colors/Catppuccin-Mocha.conf";
+  };
+
+  home.packages = with pkgs; [
+    libsForQt5.breeze-icons
+  ];
 }

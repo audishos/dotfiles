@@ -8,10 +8,11 @@
 
     config = rec {
       modifier = "Mod4";
-      terminal = "kitty";
-      menu = "wofi --show run,drun --allow-images";
+      terminal = "${pkgs.kitty}/bin/kitty";
+      # Wofi doesn't seem to load userspace environment correctly
+      menu = "${pkgs.wofi}/bin/wofi --show run,drun --allow-images";
       bars = [{
-        command = "waybar";
+        command = "${pkgs.waybar}/bin/waybar";
       }];
       defaultWorkspace = "workspace number 1";
       gaps = {
@@ -36,7 +37,7 @@
       };
       keybindings = lib.mkOptionDefault {
         # Screenshots:
-        # Super+P: Current window
+        # Super+p: Current window
         # Super+Shift+p: Select area
         # Super+Alt+p Current output
         # Super+Ctrl+p Select a window

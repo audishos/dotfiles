@@ -51,6 +51,7 @@
       mono
       audacity
       nautilus
+      libsForQt5.dolphin
       cheese
       fd
       rust-analyzer-unwrapped
