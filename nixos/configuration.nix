@@ -83,9 +83,6 @@
 
   # For sway
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
-  # Wofi launched from sway can't read home.sessionVariables
-  # Defined here as a workaround for now 😭
-  environment.sessionVariables.QT_QPA_PLATFORMTHEME = "qt5ct";
 
   xdg.portal = {
     enable = true;

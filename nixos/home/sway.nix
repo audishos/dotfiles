@@ -9,8 +9,7 @@
     config = rec {
       modifier = "Mod4";
       terminal = "${pkgs.kitty}/bin/kitty";
-      # Wofi doesn't seem to load userspace environment correctly
-      menu = "${pkgs.wofi}/bin/wofi --show run,drun --allow-images";
+      menu = "${pkgs.wofi}/bin/wofi --allow-images --show \"run,drun\"";
       bars = [{
         command = "${pkgs.waybar}/bin/waybar";
       }];

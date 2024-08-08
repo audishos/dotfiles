@@ -93,6 +93,7 @@
   };
 
   programs = {
+    bash.enable = true;
     hyfetch.enable = true;
 
     # smart cd (remembers common paths)
