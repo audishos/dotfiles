@@ -57,8 +57,6 @@
       rust-analyzer-unwrapped
       unzip
       zig
-      firefox
-      r2modman
       bubblewrap
       fuse-overlayfs
       dwarfs
@@ -95,6 +93,11 @@
   programs = {
     bash.enable = true;
     hyfetch.enable = true;
+
+    firefox = {
+      enable = true;
+      package = pkgs.firefox-devedition;
+    };
 
     # smart cd (remembers common paths)
     # https://github.com/ajeetdsouza/zoxide
