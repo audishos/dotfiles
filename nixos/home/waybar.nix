@@ -5,8 +5,8 @@
 
     settings.mainBar = {
       "reload_style_on_change" = true;
-      height = 30;
-      spacing = 32;
+      height = 8;
+      spacing = 16;
       "modules-left" = [
         "sway/workspaces"
         "sway/mode"
@@ -189,9 +189,10 @@
       @import "mocha.css";
 
       * {
-        font-family: SpaceMono Nerd Font Mono;
-        font-size: 1rem;
+        font-family: SpaceMono Nerd Font Propo;
+        font-size: 14px;
         font-weight: 700;
+        min-height: 0;
       }
 
       .modules-left,
@@ -201,6 +202,7 @@
         margin: 0 8px;
         padding: 0 16px;
         border-radius: 12px;
+        opacity: 0.85;
       }
 
       window#waybar {
@@ -219,10 +221,6 @@
       #workspaces button.visible {
         background-color: @green;
         color: @crust;
-      }
-
-      #idle_inhibitor {
-        font-size: 2rem;
       }
     '';
   };
