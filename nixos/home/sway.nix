@@ -1,5 +1,9 @@
-{ config, lib, pkgs, ... }:
 {
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
   wayland.windowManager.sway = {
     enable = true;
 
@@ -10,9 +14,11 @@
       modifier = "Mod4";
       terminal = "${pkgs.kitty}/bin/kitty";
       menu = "${pkgs.wofi}/bin/wofi --allow-images --show \"run,drun\"";
-      bars = [{
-        command = "${pkgs.waybar}/bin/waybar";
-      }];
+      bars = [
+        {
+          command = "${pkgs.waybar}/bin/waybar";
+        }
+      ];
       defaultWorkspace = "workspace number 1";
       gaps = {
         inner = 8;
@@ -23,10 +29,10 @@
       };
       output."*" = {
         adaptive_sync = "on";
-        bg = "${config.home.homeDirectory}/Pictures/wallpaper/wulingyuan_scenic_area_china.png fill";
+        bg = "${config.home.homeDirectory}/Pictures/wallpaper/lenin-mosaic.jpg fill";
       };
       startup = [
-        { command = "${pkgs.coreutils}/bin/sleep 5 && ${pkgs.keepassxc}/bin/keepassxc"; }
+        {command = "${pkgs.coreutils}/bin/sleep 5 && ${pkgs.keepassxc}/bin/keepassxc";}
       ];
       input = {
         "*" = {
@@ -79,16 +85,32 @@
     enable = true;
     events = [
       # Lock before suspend
-      { event = "before-sleep"; command = "${pkgs.swaylock}/bin/swaylock -fF"; }
-      { event = "lock"; command = "${pkgs.swaylock}/bin/swaylock -fF"; }
+      {
+        event = "before-sleep";
+        command = "${pkgs.swaylock}/bin/swaylock -fF";
+      }
+      {
+        event = "lock";
+        command = "${pkgs.swaylock}/bin/swaylock -fF";
+      }
     ];
     timeouts = [
       # Lock after 5 minutes
-      { timeout = 60 * 5; command = "${pkgs.swaylock}/bin/swaylock -fF"; }
+      {
+        timeout = 60 * 5;
+        command = "${pkgs.swaylock}/bin/swaylock -fF";
+      }
       # Turn off displays after 10 minutes & turn on when activity resumes
-      { timeout = 60 * 10; command = "${pkgs.sway}/bin/swaymsg \"output * dpms off\""; resumeCommand = "${pkgs.sway}/bin/swaymsg \"output * dpms on\""; }
+      {
+        timeout = 60 * 10;
+        command = "${pkgs.sway}/bin/swaymsg \"output * dpms off\"";
+        resumeCommand = "${pkgs.sway}/bin/swaymsg \"output * dpms on\"";
+      }
       # Suspend after 20 minutes
-      { timeout = 60 * 20; command = "${pkgs.systemd}/bin/systemctl suspend"; }
+      {
+        timeout = 60 * 20;
+        command = "${pkgs.systemd}/bin/systemctl suspend";
+      }
     ];
   };
 }
