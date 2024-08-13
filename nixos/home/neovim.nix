@@ -86,6 +86,10 @@
       name = "mini.surround";
       path = mini-nvim;
     }
+    {
+      name = "mini.files";
+      path = mini-nvim;
+    }
   ];
   mkEntryFromDrv = drv:
     if lib.isDerivation drv
@@ -168,6 +172,7 @@ in {
           { import = "lazyvim.plugins.extras.lang.terraform" },
           { import = "lazyvim.plugins.extras.util.dot" },
           { import = "lazyvim.plugins.extras.coding.mini-surround" },
+          { import = "lazyvim.plugins.extras.editor.mini-files" },
           { import = "lazyvim.plugins.extras.ui.mini-animate" },
           { import = "lazyvim.plugins.extras.editor.leap" },
           { import = "lazyvim.plugins.extras.util.octo" },
