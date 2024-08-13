@@ -15,6 +15,7 @@
     ./home/electron-apps.nix
     ./home/spotify.nix
     ./home/qt.nix
+    ./home/gaming.nix
   ];
 
   # Home Manager needs a bit of information about you and the
@@ -45,8 +46,6 @@
       nodejs
       nodePackages_latest.pnpm
       fnm
-      steam-tui
-      steamcmd
       mono
       audacity
       nautilus
