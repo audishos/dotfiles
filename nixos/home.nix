@@ -87,7 +87,6 @@
       btop
       telegram-desktop
       p7zip
-      bruno
       sublime3
     ];
   };
