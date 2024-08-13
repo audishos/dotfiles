@@ -1,5 +1,4 @@
-{ pkgs, ... }:
-{
+{pkgs, ...}: {
   imports = [
     ./home/sway.nix
     ./home/calibre.nix
@@ -87,6 +86,9 @@
       htop
       btop
       telegram-desktop
+      p7zip
+      bruno
+      sublime3
     ];
   };
 
