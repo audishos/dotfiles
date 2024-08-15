@@ -1,4 +1,8 @@
-{config, ...}: {
+{
+  config,
+  pkgs,
+  ...
+}: {
   programs.kitty = {
     enable = true;
   };
@@ -13,4 +17,6 @@
     "kitty/pass_keys.py".source = config.lib.file.mkOutOfStoreSymlink "${kittyConfigDir}/pass_keys.py";
     "kitty/get_layout.py".source = config.lib.file.mkOutOfStoreSymlink "${kittyConfigDir}/get_layout.py";
   };
+
+  home.shellAliases.kitty = "${pkgs.kitty}/bin/kitty --single-instance";
 }
