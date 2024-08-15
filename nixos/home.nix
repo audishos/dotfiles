@@ -16,6 +16,7 @@
     ./home/spotify.nix
     ./home/qt.nix
     ./home/gaming.nix
+    ./home/nnn.nix
   ];
 
   # Home Manager needs a bit of information about you and the
@@ -99,18 +100,14 @@
       package = pkgs.firefox-devedition;
     };
 
+    librewolf.enable = true;
+
     # smart cd (remembers common paths)
     # https://github.com/ajeetdsouza/zoxide
     zoxide = {
       enable = true;
       enableBashIntegration = true;
       enableZshIntegration = true;
-    };
-
-    # terminal file manager
-    # https://github.com/jarun/nnn
-    nnn = {
-      enable = true;
     };
 
     gh.enable = true;

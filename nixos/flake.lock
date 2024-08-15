@@ -52,11 +52,28 @@
         "type": "github"
       }
     },
+    "nnnSrc": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1723595172,
+        "narHash": "sha256-3jR/kCCK2z3sjcqfeEJEOQnM4Up/0BJP+MowEAzkymo=",
+        "owner": "jarun",
+        "repo": "nnn",
+        "rev": "a2deaf57f310518855160eb8f8363c532b1b611d",
+        "type": "github"
+      },
+      "original": {
+        "owner": "jarun",
+        "repo": "nnn",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "catppuccinWaybar": "catppuccinWaybar",
         "home-manager": "home-manager",
-        "nixpkgs": "nixpkgs"
+        "nixpkgs": "nixpkgs",
+        "nnnSrc": "nnnSrc"
       }
     }
   },
