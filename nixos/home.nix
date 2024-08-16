@@ -28,7 +28,7 @@
   # configuration is compatible with. This helps avoid breakage
   # when a new Home Manager release introduces backwards
   # incompatible changes.
-  #
+
   # You can update Home Manager without changing this value. See
   # the Home Manager release notes for a list of state version
   # changes in each release.
@@ -76,7 +76,6 @@
       openssl
       python3
       udisks
-      sway-contrib.grimshot # sway screenshot tool
       pinta # simple image editor
       deluge-gtk
       streamlink

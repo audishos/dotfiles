@@ -3,7 +3,9 @@
   lib,
   pkgs,
   ...
-}: {
+}: let
+  grimshot = pkgs.sway-contrib.grimshot;
+in {
   wayland.windowManager.sway = {
     enable = true;
 
@@ -46,11 +48,13 @@
         # Super+Shift+p: Select area
         # Super+Alt+p Current output
         # Super+Ctrl+p Select a window
+        "${modifier}+p" = "exec ${grimshot}/bin/grimshot save active";
+        "${modifier}+Shift+p" = "exec ${grimshot}/bin/grimshot save area";
+        "${modifier}+Mod1+p" = "exec ${grimshot}/bin/grimshot save output";
+        "${modifier}+Ctrl+p" = "exec ${grimshot}/bin/grimshot save window";
 
-        "${modifier}+p" = "exec grimshot save active";
-        "${modifier}+Shift+p" = "exec grimshot save area";
-        "${modifier}+Mod1+p" = "exec grimshot save output";
-        "${modifier}+Ctrl+p" = "exec grimshot save window";
+        # Lock system
+        "${modifier}+Ctrl+l" = "exec ${pkgs.swaylock}/bin/swaylock -fF";
       };
       floating = {
         criteria = [
@@ -67,6 +71,8 @@
       };
     };
   };
+
+  home.packages = [grimshot];
 
   programs.swaylock = {
     enable = true;
