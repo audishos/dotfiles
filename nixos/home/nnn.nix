@@ -8,6 +8,7 @@
     withNerdIcons = true;
     withPcre = true;
   };
+  homeDir = config.home.homeDirectory;
 in {
   # terminal file manager
   # https://github.com/jarun/nnn
@@ -17,15 +18,20 @@ in {
       package = nnn;
       plugins = {
         src = "${nnnSrc}/plugins";
-        mappings = {
-          p = "preview-tui";
-        };
       };
     };
   };
 
   home = {
-    sessionVariables.NNN_FIFO = "${config.home.homeDirectory}/.cache/nnn.fifo";
+    sessionVariables = {
+      # File cache for things like preview
+      NNN_FIFO = "${homeDir}/.cache/nnn.fifo";
+      # Plugin mappings https://github.com/jarun/nnn/tree/master/plugins#configuration
+      NNN_PLUG = "p:preview-tui";
+      # Bookmarks https://github.com/jarun/nnn/wiki/Basic-use-cases#add-bookmarks
+      NNN_BMS = "c:${homeDir}/code;d:${homeDir}/Downloads";
+    };
+
     shellAliases = {
       nnn = "${nnn}/bin/nnn -e";
       ls = "${nnn}/bin/nnn -e";
