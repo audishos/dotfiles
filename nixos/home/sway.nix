@@ -83,7 +83,8 @@ in {
       indicator-radius = 100;
       line-color = "ffffff";
       show-failed-attempts = true;
-      image = "/home/audisho/Pictures/wallpaper/swirly-blue.png";
+      image = "${config.home.homeDirectory}/Pictures/wallpaper/wulingyuan_scenic_area_china.png";
+      scaling = "fill";
     };
   };
 
