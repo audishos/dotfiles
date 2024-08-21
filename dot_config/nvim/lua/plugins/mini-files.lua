@@ -2,7 +2,16 @@ return {
   {
     "echasnovski/mini.files",
     opts = {
-      use_as_default_explorer = true,
+      windows = {
+        width_preview = 60,
+      },
+      options = {
+        use_as_default_explorer = true,
+      },
     },
+  },
+  {
+    "nvim-neo-tree/neo-tree.nvim",
+    enabled = false,
   },
 }
