@@ -12,9 +12,7 @@ return {
         eslint = {
           root_dir = get_eslint_root_in_monorepo,
         },
-        nil_ls = {
-          root_dir = util.root_pattern("flake.nix"),
-        },
+        nil_ls = {},
       },
     },
   },
