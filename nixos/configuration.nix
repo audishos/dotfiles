@@ -1,16 +1,18 @@
 # Edit this configuration file to define what should be installed on
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running `nixos-help`).
-
-{ config, pkgs, lib, ... }:
 {
-  imports =
-    [
-      # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-      # ./home-manager.nix
-      ./system/fonts.nix
-    ];
+  config,
+  pkgs,
+  lib,
+  ...
+}: {
+  imports = [
+    # Include the results of the hardware scan.
+    ./hardware-configuration.nix
+    # ./home-manager.nix
+    ./system/fonts.nix
+  ];
 
   # Use the systemd-boot EFI boot loader.
   boot.loader = {
@@ -47,7 +49,7 @@
 
   nix = {
     # Experiemental features
-    settings.experimental-features = [ "nix-command" "flakes" ];
+    settings.experimental-features = ["nix-command" "flakes"];
 
     # Automatic garbage collection
     gc = {
@@ -99,7 +101,6 @@
   security = {
     polkit.enable = true;
     pam.services.swaylock.text = "auth include login";
-
   };
 
   # OBS virtual cam
@@ -128,12 +129,15 @@
     isNormalUser = true;
     shell = pkgs.zsh;
     home = "/home/audisho";
-    extraGroups = [ "wheel" "networkmanager" ]; # Enable ‘sudo’ for the user.
+    extraGroups = ["wheel" "networkmanager"]; # Enable ‘sudo’ for the user.
   };
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
-  nixpkgs.config.allowUnfree = true;
+  nixpkgs.config = {
+    allowUnfree = true;
+    permittedInsecurePackages = ["electron-29.4.6"];
+  };
 
   environment.systemPackages = with pkgs; [
     wget
@@ -156,7 +160,7 @@
     DOTNET_ROOT = "${pkgs.dotnet-sdk}";
   };
 
-  services.udev.packages = with pkgs; [ mixxx ];
+  services.udev.packages = with pkgs; [mixxx];
   services.flatpak.enable = true;
   services.udisks2.enable = true;
   # Some programs need SUID wrappers, can be configured further or are
