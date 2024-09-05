@@ -51,6 +51,7 @@
       audacity
       nautilus
       libsForQt5.dolphin
+      libsForQt5.kalk
       cheese
       fd
       rust-analyzer-unwrapped
