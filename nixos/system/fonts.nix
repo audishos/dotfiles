@@ -1,10 +1,8 @@
-{ pkgs, ... }:
-{
+{pkgs, ...}: {
   fonts = {
     enableDefaultPackages = true;
 
     packages = with pkgs; [
-      symbola
       noto-fonts
       noto-fonts-cjk
       noto-fonts-emoji
@@ -17,13 +15,13 @@
       source-han-sans-japanese
       source-han-serif-japanese
       (nerdfonts.override {
-        fonts = [ "FiraCode" "FantasqueSansMono" "JetBrainsMono" "SpaceMono" ];
+        fonts = ["FiraCode" "FantasqueSansMono" "JetBrainsMono" "SpaceMono"];
       })
     ];
 
     fontconfig.defaultFonts = {
-      serif = [ "Noto Serif" "Source Han Serif" ];
-      sansSerif = [ "Noto Sans" "Source Han Sans" ];
+      serif = ["Noto Serif" "Source Han Serif"];
+      sansSerif = ["Noto Sans" "Source Han Sans"];
     };
   };
 }
