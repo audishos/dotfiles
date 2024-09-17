@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  pkgsChromium,
+  ...
+}: {
   imports = [
     ./home/sway.nix
     ./home/calibre.nix
@@ -81,7 +85,8 @@
       deluge-gtk
       streamlink
       streamlink-twitch-gui-bin
-      qpdfview
+      # build failing - try again next update
+      # qpdfview
       libreoffice-fresh
       htop
       btop
@@ -101,6 +106,11 @@
     };
 
     librewolf.enable = true;
+
+    chromium = {
+      enable = true;
+      package = pkgsChromium.ungoogled-chromium;
+    };
 
     # smart cd (remembers common paths)
     # https://github.com/ajeetdsouza/zoxide
