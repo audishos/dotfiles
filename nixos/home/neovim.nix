@@ -49,10 +49,8 @@
     tokyonight-nvim
     trouble-nvim
     typescript-tools-nvim
-    vim-fugitive
     vim-illuminate
     vim-kitty-navigator
-    vim-rhubarb
     vim-startuptime
     which-key-nvim
     {
