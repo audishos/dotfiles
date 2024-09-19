@@ -106,29 +106,40 @@
   };
 in {
   # Install neovim and LazyVim base dependencies locally
-  programs.neovim = {
-    enable = true;
-    vimAlias = true;
-    extraPackages = with pkgs; [
-      # LazyVim
-      lua-language-server
-      stylua
-      nodePackages.typescript-language-server
-      nodePackages.bash-language-server
-      nixpkgs-fmt
-      # Telescope
-      ripgrep
-      eslint_d
-      prettierd
-      lazygit
-      lua-language-server
-      statix
-      vscode-langservers-extracted
-    ];
+  programs = {
+    neovim = {
+      enable = true;
+      vimAlias = true;
+      extraPackages = with pkgs; [
+        # LazyVim
+        lua-language-server
+        stylua
+        nodePackages.typescript-language-server
+        nodePackages.bash-language-server
+        nixpkgs-fmt
+        # Telescope
+        ripgrep
+        eslint_d
+        prettierd
+        lua-language-server
+        statix
+        vscode-langservers-extracted
+      ];
 
-    plugins = with pkgs.vimPlugins; [
-      lazy-nvim
-    ];
+      plugins = with pkgs.vimPlugins; [
+        lazy-nvim
+      ];
+    };
+
+    lazygit = {
+      enable = true;
+      settings = {
+        git.paging = {
+          colorArg = "always";
+          pager = "${pkgs.delta}/bin/delta --dark --paging=never --line-numbers --hyperlinks --hyperlinks-file-link-format=\"lazygit-edit://{path}:{line}\"";
+        };
+      };
+    };
   };
 
   xdg.configFile = {
