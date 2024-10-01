@@ -85,8 +85,7 @@
       deluge-gtk
       streamlink
       streamlink-twitch-gui-bin
-      # build failing - try again next update
-      # qpdfview
+      qpdfview
       libreoffice-fresh
       htop
       btop
