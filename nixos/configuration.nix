@@ -148,7 +148,7 @@
     libva-utils
     radeontop
     nixpkgs-fmt
-    openvpn3
+    openvpn
     samba
     cifs-utils
     gnumake

@@ -5,7 +5,8 @@
 }: {
   imports = [
     ./home/sway.nix
-    ./home/calibre.nix
+    # currently failing to build - try again later...
+    # ./home/calibre.nix
     ./home/waybar.nix
     ./home/kitty.nix
     ./home/wezterm.nix
