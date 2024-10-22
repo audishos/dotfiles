@@ -8,7 +8,7 @@
       config.font = wezterm.font_with_fallback {
         'Fira Code Nerd Font',
         'noto-fonts',
-        'noto-fonts-cjk',
+        'noto-fonts-cjk-sans',
         'noto-fonts-emoji',
         'Symbola',
         'font-awesome',

@@ -3,12 +3,11 @@
   vesktop = pkgs.vesktop.override {inherit electron;};
   r2modman = pkgs.r2modman.override {inherit electron;};
   bruno = pkgs.bruno.override {inherit electron;};
-  logseq = pkgs.logseq.override {inherit electron;};
 in {
   home.packages = [
     vesktop
     r2modman
     bruno
-    logseq
+    pkgs.logseq
   ];
 }

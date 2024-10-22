@@ -136,7 +136,10 @@
   # $ nix search wget
   nixpkgs.config = {
     allowUnfree = true;
-    permittedInsecurePackages = ["electron-29.4.6"];
+    permittedInsecurePackages = [
+      "electron-29.4.6"
+      "electron-27.3.11"
+    ];
   };
 
   environment.systemPackages = with pkgs; [
