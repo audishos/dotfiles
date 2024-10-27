@@ -5,8 +5,7 @@
 }: {
   imports = [
     ./home/sway.nix
-    # currently failing to build - try again later...
-    # ./home/calibre.nix
+    ./home/calibre.nix
     ./home/waybar.nix
     ./home/kitty.nix
     ./home/wezterm.nix
@@ -93,6 +92,7 @@
       telegram-desktop
       p7zip
       sublime3
+      mullvad-vpn
     ];
   };
 

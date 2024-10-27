@@ -177,6 +177,8 @@
   # GTK daemon for accessing samba shares
   services.gvfs.enable = true;
 
+  services.mullvad-vpn.enable = true;
+
   # List services that you want to enable:
 
   # Enable the OpenSSH daemon.
