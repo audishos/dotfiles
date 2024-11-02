@@ -53,7 +53,6 @@
       fnm
       mono
       audacity
-      nautilus
       libsForQt5.dolphin
       libsForQt5.kalk
       cheese
@@ -94,6 +93,13 @@
       sublime3
       mullvad-vpn
     ];
+  };
+
+  services = {
+    kdeconnect = {
+      enable = true;
+      indicator = true;
+    };
   };
 
   programs = {
