@@ -16,6 +16,7 @@
       "application/xhtml+xml" = "firefox-devedition.desktop";
       "application/x-extension-xhtml" = "firefox-devedition.desktop";
       "application/x-extension-xht" = "firefox-devedition.desktop    ";
+      "video/mp4" = "mpv.desktop";
     };
   };
 }

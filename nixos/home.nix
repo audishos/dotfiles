@@ -127,5 +127,11 @@
     };
 
     gh.enable = true;
+
+    yt-dlp.enable = true;
+
+    mpv.enable = true;
+
+    nheko.enable = true;
   };
 }
