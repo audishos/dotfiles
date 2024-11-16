@@ -100,6 +100,8 @@
       enable = true;
       indicator = true;
     };
+
+    network-manager-applet.enable = true;
   };
 
   programs = {
