@@ -91,7 +91,6 @@
       telegram-desktop
       p7zip
       sublime3
-      mullvad-vpn
     ];
   };
 

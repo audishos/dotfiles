@@ -178,7 +178,10 @@
   # GTK daemon for accessing samba shares
   services.gvfs.enable = true;
 
-  services.mullvad-vpn.enable = true;
+  services.mullvad-vpn = {
+    enable = true;
+    package = pkgs.mullvad-vpn;
+  };
 
   # List services that you want to enable:
 
