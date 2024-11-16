@@ -225,6 +225,9 @@ in {
     "nvim/lua".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/code/dotfiles/dot_config/nvim/lua";
   };
 
+  # Sets nvim to be used as the default pager (default=less)
+  home.sessionVariables.PAGER = "${pkgs.nvimpager}/bin/nvimpager";
+
   home.packages = with pkgs; [
     lazygit
     ripgrep
@@ -235,5 +238,6 @@ in {
     selene
     nil
     alejandra
+    nvimpager
   ];
 }
