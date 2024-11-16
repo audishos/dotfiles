@@ -3,6 +3,7 @@
     enableDefaultPackages = true;
 
     packages = with pkgs; [
+      atkinson-hyperlegible
       noto-fonts
       noto-fonts-cjk-sans
       noto-fonts-emoji
