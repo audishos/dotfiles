@@ -1,4 +1,4 @@
-{
+{pkgs, ...}: {
   programs.wofi = {
     enable = true;
 
@@ -44,4 +44,8 @@
       }
     '';
   };
+
+  home.packages = with pkgs; [
+    wofi-emoji
+  ];
 }

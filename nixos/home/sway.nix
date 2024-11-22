@@ -15,7 +15,8 @@ in {
     config = rec {
       modifier = "Mod4";
       terminal = "${pkgs.kitty}/bin/kitty";
-      menu = "${pkgs.wofi}/bin/wofi --allow-images --show \"run,drun\"";
+      # menu = "${pkgs.wofi}/bin/wofi --allow-images --show \"run,drun\"";
+      menu = "${pkgs.fuzzel}/bin/fuzzel";
       bars = [
         {
           command = "${pkgs.waybar}/bin/waybar";
@@ -55,6 +56,10 @@ in {
 
         # Lock system
         "${modifier}+Ctrl+l" = "exec ${pkgs.swaylock}/bin/swaylock -fF";
+
+        # Emoji picker
+        # "${modifier}+colon" = "exec ${pkgs.wofi-emoji}/bin/wofi-emoji";
+        "${modifier}+colon" = "exec ${pkgs.bemoji}/bin/bemoji -t";
       };
       floating = {
         criteria = [

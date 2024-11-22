@@ -21,6 +21,7 @@
     ./home/qt.nix
     ./home/gaming.nix
     ./home/nnn.nix
+    ./home/fuzzel.nix
   ];
 
   # Home Manager needs a bit of information about you and the
