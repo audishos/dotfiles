@@ -85,12 +85,15 @@
       streamlink
       streamlink-twitch-gui-bin
       qpdfview
-      libreoffice-fresh
+      # Never ending build lol
+      # libreoffice-fresh
       htop
       btop
       telegram-desktop
       p7zip
       sublime3
+      ncpamixer # TUI alternative to pavucontrol
+      inkscape
     ];
   };
 
