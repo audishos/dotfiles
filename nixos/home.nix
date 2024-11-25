@@ -4,6 +4,7 @@
   ...
 }: {
   imports = [
+    ./home/session-variables.nix
     ./home/sway.nix
     ./home/calibre.nix
     ./home/waybar.nix
@@ -16,7 +17,6 @@
     ./home/zsh.nix
     ./home/obs.nix
     ./home/default-applications.nix
-    ./home/electron-apps.nix
     ./home/spotify.nix
     ./home/qt.nix
     ./home/gaming.nix
@@ -95,6 +95,10 @@
       sublime3
       ncpamixer # TUI alternative to pavucontrol
       inkscape
+      vesktop
+      r2modman
+      bruno
+      logseq
     ];
   };
 
