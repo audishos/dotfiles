@@ -48,8 +48,19 @@
   programs.zsh.enable = true;
 
   nix = {
-    # Experiemental features
-    settings.experimental-features = ["nix-command" "flakes"];
+    settings = {
+      # Experiemental features
+      experimental-features = ["nix-command" "flakes"];
+
+      # Optimizes nix store on every build (could harm build performance)
+      auto-optimise-store = true;
+    };
+
+    # Automatic store optimization
+    optimise = {
+      automatic = true;
+      # dates = ["03:45"];
+    };
 
     # Automatic garbage collection
     gc = {
