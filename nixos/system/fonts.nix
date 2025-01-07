@@ -15,9 +15,10 @@
       source-han-sans
       source-han-sans-japanese
       source-han-serif-japanese
-      (nerdfonts.override {
-        fonts = ["FiraCode" "FantasqueSansMono" "JetBrainsMono" "SpaceMono"];
-      })
+      nerd-fonts.fira-code
+      nerd-fonts.fantasque-sans-mono
+      nerd-fonts.jetbrains-mono
+      nerd-fonts.space-mono
     ];
 
     fontconfig.defaultFonts = {
