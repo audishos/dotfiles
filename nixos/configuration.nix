@@ -28,6 +28,9 @@
   # Pick only one of the below networking options.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
   networking.networkmanager.enable = true; # Easiest to use and most distros use this by default.
+  # networkd + networkmanager cause wait-online to timeout
+  # wait-online is redundant with networkmanager enabled
+  systemd.network.wait-online.enable = lib.mkForce false;
 
   # Set your time zone.
   time.timeZone = "America/Toronto";
