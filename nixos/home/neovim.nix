@@ -210,7 +210,7 @@ in {
               -- "netrwPlugin",
               "tarPlugin",
               "tohtml",
-              "tutor",
+              -- "tutor",
               "zipPlugin",
             },
           },
