@@ -115,6 +115,11 @@
     bash.enable = true;
     hyfetch.enable = true;
 
+    fzf = {
+      enable = true;
+      enableZshIntegration = true;
+    };
+
     firefox = {
       enable = true;
       package = pkgs.firefox-devedition;
