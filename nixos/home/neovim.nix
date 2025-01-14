@@ -43,8 +43,6 @@
     octo-nvim
     persistence-nvim
     plenary-nvim
-    telescope-fzf-native-nvim
-    telescope-nvim
     todo-comments-nvim
     tokyonight-nvim
     trouble-nvim
@@ -109,19 +107,23 @@ in {
       enable = true;
       vimAlias = true;
       extraPackages = with pkgs; [
-        # LazyVim
         lua-language-server
         stylua
         nodePackages.typescript-language-server
         nodePackages.bash-language-server
         nixpkgs-fmt
-        # Telescope
-        ripgrep
         eslint_d
         prettierd
         lua-language-server
         statix
-        vscode-langservers-extracted
+        vtsls
+        lazygit
+        ripgrep
+        lazygit
+        selene
+        nil
+        alejandra
+        nvimpager
       ];
 
       plugins = with pkgs.vimPlugins; [
@@ -171,7 +173,6 @@ in {
         spec = {
           { "LazyVim/LazyVim", import = "lazyvim.plugins" },
           -- import any extras modules here
-          { import = "lazyvim.plugins.extras.editor.telescope" },
           { import = "lazyvim.plugins.extras.lang.typescript" },
           { import = "lazyvim.plugins.extras.lang.json" },
           { import = "lazyvim.plugins.extras.lang.python" },
@@ -189,8 +190,6 @@ in {
           { import = "lazyvim.plugins.extras.test.core" },
           { import = "lazyvim.plugins.extras.dap.core" },
           -- The following configs are needed for fixing lazyvim on nix
-          -- force enable telescope-fzf-native.nvim
-          { "nvim-telescope/telescope-fzf-native.nvim", enabled = true },
           -- disable mason.nvim, use programs.neovim.extraPackages
           { "williamboman/mason-lspconfig.nvim", enabled = false },
           { "williamboman/mason.nvim", enabled = false },
@@ -227,17 +226,4 @@ in {
 
   # Sets nvim to be used as the default pager (default=less)
   home.sessionVariables.PAGER = "${pkgs.nvimpager}/bin/nvimpager";
-
-  home.packages = with pkgs; [
-    lazygit
-    ripgrep
-    eslint_d
-    prettierd
-    lazygit
-    statix
-    selene
-    nil
-    alejandra
-    nvimpager
-  ];
 }
