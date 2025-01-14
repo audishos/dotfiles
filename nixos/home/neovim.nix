@@ -7,11 +7,9 @@
   plugins = with pkgs.vimPlugins; [
     # LazyVim
     LazyVim
+    blink-cmp
+    blink-emoji-nvim
     bufferline-nvim
-    cmp-buffer
-    cmp-nvim-lsp
-    cmp-path
-    cmp_luasnip
     conform-nvim
     dashboard-nvim
     dressing-nvim
@@ -51,10 +49,6 @@
     vim-kitty-navigator
     vim-startuptime
     which-key-nvim
-    {
-      name = "LuaSnip";
-      path = luasnip;
-    }
     {
       name = "catppuccin";
       path = catppuccin-nvim;
