@@ -27,7 +27,6 @@
     noice-nvim
     none-ls-nvim
     nui-nvim
-    nvim-cmp
     nvim-lint
     nvim-lspconfig
     nvim-notify
