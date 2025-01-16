@@ -111,6 +111,11 @@ l = 'resize width +50'
 enter = 'mode main'
 esc = 'mode main'
 
+# Floating window apps
+[[on-window-detected]]
+if.app-id = 'org.keepassxc.keepassxc'
+run = 'layout floating'
+
 # Assign apps to workspaces
 [[on-window-detected]]
 if.app-id = 'org.mozilla.firefox'
