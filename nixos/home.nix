@@ -89,7 +89,7 @@
       # Never ending build lol
       # libreoffice-fresh
       htop
-      btop
+      gotop
       telegram-desktop
       p7zip
       sublime3
@@ -99,6 +99,8 @@
       r2modman
       bruno
       logseq
+      zoom-us
+      dig # DNS lookup utility
     ];
   };
 
