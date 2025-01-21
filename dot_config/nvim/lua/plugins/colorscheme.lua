@@ -8,7 +8,6 @@ return {
       transparent_background = true,
     },
   },
-  { "dracula/vim" },
   {
     "LazyVim/LazyVim",
     opts = {
