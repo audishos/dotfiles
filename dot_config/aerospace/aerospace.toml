@@ -116,6 +116,10 @@ esc = 'mode main'
 if.app-id = 'org.keepassxc.keepassxc'
 run = 'layout floating'
 
+[[on-window-detected]]
+if.app-id = 'com.wulkano.kap'
+run = 'layout floating'
+
 # Assign apps to workspaces
 [[on-window-detected]]
 if.app-id = 'org.mozilla.firefox'
