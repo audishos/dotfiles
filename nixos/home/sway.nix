@@ -32,7 +32,7 @@ in {
       };
       output."*" = {
         adaptive_sync = "on";
-        bg = "${config.home.homeDirectory}/Pictures/wallpaper/vietnam-street-night.jpg fill";
+        bg = "${config.home.homeDirectory}/Pictures/wallpaper/vietnam_old-boat-with-sails.jpg fill";
       };
       startup = [
         {command = "${pkgs.coreutils}/bin/sleep 5 && ${pkgs.keepassxc}/bin/keepassxc";}
