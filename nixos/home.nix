@@ -101,6 +101,7 @@
       logseq
       zoom-us
       dig # DNS lookup utility
+      ollama-rocm
     ];
   };
 
