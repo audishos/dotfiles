@@ -102,15 +102,11 @@
       zoom-us
       dig # DNS lookup utility
       ollama-rocm
+      netcat-gnu
     ];
   };
 
   services = {
-    kdeconnect = {
-      enable = true;
-      indicator = true;
-    };
-
     network-manager-applet.enable = true;
   };
 
