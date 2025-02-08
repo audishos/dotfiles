@@ -131,6 +131,11 @@
       package = pkgsChromium.ungoogled-chromium;
     };
 
+    thunderbird = {
+      enable = true;
+      profiles = {};
+    };
+
     # smart cd (remembers common paths)
     # https://github.com/ajeetdsouza/zoxide
     zoxide = {
