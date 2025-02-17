@@ -124,7 +124,7 @@
       package = pkgs.firefox-devedition;
     };
 
-    librewolf.enable = true;
+    # librewolf.enable = true;
 
     chromium = {
       enable = true;

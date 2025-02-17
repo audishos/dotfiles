@@ -12,6 +12,7 @@
     ./hardware-configuration.nix
     # ./home-manager.nix
     ./system/fonts.nix
+    ./system/network-shares.nix
   ];
 
   # Use the systemd-boot EFI boot loader.
