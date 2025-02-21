@@ -34,7 +34,6 @@ in {
 
     shellAliases = {
       nnn = "${nnn}/bin/nnn -e";
-      ls = "${nnn}/bin/nnn -e";
     };
   };
 }

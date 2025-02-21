@@ -103,6 +103,7 @@
       dig # DNS lookup utility
       ollama-rocm
       netcat-gnu
+      sshfs # Mount filesystems over SSH https://github.com/libfuse/sshfs
     ];
   };
 

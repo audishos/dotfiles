@@ -40,6 +40,7 @@
     octo-nvim
     persistence-nvim
     plenary-nvim
+    snacks-nvim
     todo-comments-nvim
     tokyonight-nvim
     trouble-nvim
