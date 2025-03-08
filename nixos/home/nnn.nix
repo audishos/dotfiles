@@ -30,6 +30,8 @@ in {
       NNN_PLUG = "p:preview-tui";
       # Bookmarks https://github.com/jarun/nnn/wiki/Basic-use-cases#add-bookmarks
       NNN_BMS = "c:${homeDir}/code;d:${homeDir}/Downloads";
+      # Handles moar archive types via bsd(tar)
+      NNN_ARCHIVE = "\\.(7z|a|ace|alz|arc|arj|bz|bz2|cab|cpio|deb|gz|jar|lha|lz|lzh|lzma|lzo|rar|rpm|rz|t7z|tar|tbz|tbz2|tgz|tlz|txz|tZ|tzo|war|xpi|xz|Z|zip)$";
     };
 
     shellAliases = {
