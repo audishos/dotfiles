@@ -98,12 +98,17 @@
       vesktop
       r2modman
       bruno
-      logseq
+      # removed - lack of maintenance 😢
+      # logseq
       zoom-us
       dig # DNS lookup utility
       ollama-rocm
       netcat-gnu
       sshfs # Mount filesystems over SSH https://github.com/libfuse/sshfs
+      bzip2
+      bzip3
+      gzip
+      television # fast file search TUI https://github.com/alexpasmantier/television
     ];
   };
 
@@ -122,7 +127,8 @@
 
     firefox = {
       enable = true;
-      package = pkgs.firefox-devedition;
+      # non-bin was failing to build
+      package = pkgs.firefox-devedition-bin;
     };
 
     # librewolf.enable = true;
