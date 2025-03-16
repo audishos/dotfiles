@@ -109,6 +109,7 @@
       bzip3
       gzip
       television # fast file search TUI https://github.com/alexpasmantier/television
+      zk # plain text personal wiki https://github.com/zk-org/zk
     ];
   };
 
