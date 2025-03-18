@@ -49,6 +49,7 @@
     vim-kitty-navigator
     vim-startuptime
     which-key-nvim
+    zk-nvim
     {
       name = "catppuccin";
       path = catppuccin-nvim;
@@ -118,6 +119,8 @@ in {
         nil
         alejandra
         nvimpager
+        marksman
+        markdownlint-cli2
       ];
 
       plugins = with pkgs.vimPlugins; [
