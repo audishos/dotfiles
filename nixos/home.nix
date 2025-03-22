@@ -110,6 +110,7 @@
       gzip
       television # fast file search TUI https://github.com/alexpasmantier/television
       zk # plain text personal wiki https://github.com/zk-org/zk
+      zenith # like htop with GPU https://github.com/bvaisvil/zenith
     ];
   };
 
