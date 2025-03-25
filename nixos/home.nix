@@ -111,11 +111,23 @@
       television # fast file search TUI https://github.com/alexpasmantier/television
       zk # plain text personal wiki https://github.com/zk-org/zk
       zenith # like htop with GPU https://github.com/bvaisvil/zenith
+      ffmpeg
+      playwright
     ];
   };
 
   services = {
     network-manager-applet.enable = true;
+
+    # automatic day/night light/dark mode switcher
+    darkman = {
+      enable = true;
+
+      settings = {
+        lat = 43.6;
+        lng = -79.3;
+      };
+    };
   };
 
   programs = {
