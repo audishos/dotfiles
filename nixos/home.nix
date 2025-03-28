@@ -114,6 +114,11 @@
       ffmpeg
       playwright
     ];
+
+    sessionVariables = {
+      # https://zk-org.github.io/zk/notes/notebook.html
+      ZK_NOTEBOOK_DIR = "~/Nextcloud/Notes/";
+    };
   };
 
   services = {
