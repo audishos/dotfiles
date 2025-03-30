@@ -131,6 +131,22 @@
       settings = {
         lat = 43.6;
         lng = -79.3;
+        dbusserver = true;
+        portal = true;
+      };
+    };
+  };
+
+  xdg.portal = {
+    enable = true;
+    extraPortals = with pkgs; [
+      xdg-desktop-portal-gtk
+      xdg-desktop-portal-wlr
+    ];
+    config = {
+      common = {
+        default = "wlr";
+        "org.freedesktop.impl.portal.Settings" = "darkman";
       };
     };
   };
@@ -173,6 +189,8 @@
     gh.enable = true;
 
     yt-dlp.enable = true;
+
+    freetube.enable = true;
 
     mpv.enable = true;
 

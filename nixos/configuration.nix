@@ -112,6 +112,8 @@
     config.common.default = "wlr";
   };
 
+  environment.pathsToLink = ["/share/xdg-desktop-portal" "/share/applications"];
+
   services.gnome.gnome-keyring.enable = true;
 
   security = {
