@@ -51,7 +51,6 @@
       android-tools
       nodejs
       nodePackages_latest.pnpm
-      fnm
       mono
       audacity
       libsForQt5.dolphin

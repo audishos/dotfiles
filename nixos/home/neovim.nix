@@ -102,25 +102,25 @@ in {
       enable = true;
       vimAlias = true;
       extraPackages = with pkgs; [
-        lua-language-server
-        stylua
-        nodePackages.typescript-language-server
-        nodePackages.bash-language-server
-        nixpkgs-fmt
-        eslint_d
-        prettierd
-        lua-language-server
-        statix
-        vtsls
-        lazygit
-        ripgrep
-        lazygit
-        selene
-        nil
         alejandra
-        nvimpager
-        marksman
+        eslint
+        eslint_d
+        lazygit
+        lua-language-server
         markdownlint-cli2
+        marksman
+        nil
+        nixpkgs-fmt
+        nodePackages.bash-language-server
+        nodePackages.typescript-language-server
+        nvimpager
+        prettierd
+        ripgrep
+        selene
+        statix
+        stylua
+        vscode-langservers-extracted
+        vtsls
       ];
 
       plugins = with pkgs.vimPlugins; [

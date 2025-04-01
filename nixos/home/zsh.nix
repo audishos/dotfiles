@@ -6,7 +6,6 @@
       enable = true;
       plugins = [
         "git"
-        "fnm"
       ];
       theme = "robbyrussell";
     };
@@ -54,9 +53,6 @@
       }
 
       trap nnn_cd EXIT
-
-      # switch to node version defined in project on cd
-      eval "$(fnm env --use-on-cd)"
     '';
   };
 }
