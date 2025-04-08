@@ -101,28 +101,6 @@ in {
     neovim = {
       enable = true;
       vimAlias = true;
-      extraPackages = with pkgs; [
-        alejandra
-        eslint
-        eslint_d
-        lazygit
-        lua-language-server
-        markdownlint-cli2
-        marksman
-        nil
-        nixpkgs-fmt
-        nodePackages.bash-language-server
-        nodePackages.typescript-language-server
-        nvimpager
-        prettierd
-        ripgrep
-        selene
-        statix
-        stylua
-        vscode-langservers-extracted
-        vtsls
-      ];
-
       plugins = with pkgs.vimPlugins; [
         lazy-nvim
       ];
@@ -221,6 +199,31 @@ in {
     "nvim/lua".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/code/dotfiles/dot_config/nvim/lua";
   };
 
-  # Sets nvim to be used as the default pager (default=less)
-  home.sessionVariables.PAGER = "${pkgs.nvimpager}/bin/nvimpager";
+  home = {
+    packages = with pkgs; [
+      alejandra
+      eslint
+      eslint_d
+      lazygit
+      lua-language-server
+      markdownlint-cli2
+      marksman
+      nil
+      nixpkgs-fmt
+      nodePackages.bash-language-server
+      nodePackages.prettier
+      nodePackages.typescript-language-server
+      nvimpager
+      prettierd
+      ripgrep
+      selene
+      statix
+      stylua
+      vscode-langservers-extracted
+      vtsls
+    ];
+
+    # Sets nvim to be used as the default pager (default=less)
+    sessionVariables.PAGER = "${pkgs.nvimpager}/bin/nvimpager -p";
+  };
 }
