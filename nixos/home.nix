@@ -76,7 +76,7 @@
       wdisplays
       zip
       binutils
-      ruff-lsp
+      ruff
       openssl
       python3
       udisks
@@ -112,6 +112,9 @@
       zenith # like htop with GPU https://github.com/bvaisvil/zenith
       ffmpeg
       playwright
+      rsync
+      exiftool
+      jellyfin-media-player
     ];
 
     sessionVariables = {

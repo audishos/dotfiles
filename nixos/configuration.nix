@@ -182,7 +182,7 @@
     DOTNET_ROOT = "${pkgs.dotnet-sdk}";
   };
 
-  services.udev.packages = with pkgs; [mixxx];
+  # services.udev.packages = with pkgs; [mixxx];
   services.flatpak.enable = true;
   services.udisks2.enable = true;
   # Some programs need SUID wrappers, can be configured further or are
