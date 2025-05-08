@@ -36,6 +36,7 @@ in {
       };
       startup = [
         {command = "${pkgs.coreutils}/bin/sleep 5 && ${pkgs.keepassxc}/bin/keepassxc";}
+        {command = "${pkgs.wayland-pipewire-idle-inhibit}/bin/wayland-pipewire-idle-inhibit";}
       ];
       input = {
         "*" = {
@@ -77,7 +78,10 @@ in {
     };
   };
 
-  home.packages = [grimshot];
+  home.packages = [
+    grimshot
+    pkgs.wayland-pipewire-idle-inhibit
+  ];
 
   programs.swaylock = {
     enable = true;

@@ -9,7 +9,7 @@
       ];
       theme = "robbyrussell";
     };
-    initExtra = ''
+    initContent = ''
       # nnn cd-on-quit
       # navigates to the current folder in terminal on quit
       n ()

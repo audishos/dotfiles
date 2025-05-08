@@ -4,24 +4,25 @@
   ...
 }: {
   imports = [
-    ./home/session-variables.nix
-    ./home/sway.nix
     ./home/calibre.nix
-    ./home/waybar.nix
-    ./home/kitty.nix
-    ./home/wezterm.nix
-    ./home/neovim.nix
-    ./home/wofi.nix
-    ./home/nextcloud.nix
-    ./home/git.nix
-    ./home/zsh.nix
-    ./home/obs.nix
+    ./home/cursors.nix
     ./home/default-applications.nix
-    ./home/spotify.nix
-    ./home/qt.nix
-    ./home/gaming.nix
-    ./home/nnn.nix
     ./home/fuzzel.nix
+    ./home/gaming.nix
+    ./home/git.nix
+    ./home/kitty.nix
+    ./home/neovim.nix
+    ./home/nextcloud.nix
+    ./home/nnn.nix
+    ./home/obs.nix
+    ./home/qt.nix
+    ./home/session-variables.nix
+    ./home/spotify.nix
+    ./home/sway.nix
+    ./home/waybar.nix
+    ./home/wezterm.nix
+    ./home/wofi.nix
+    ./home/zsh.nix
   ];
 
   # Home Manager needs a bit of information about you and the
@@ -115,6 +116,7 @@
       rsync
       exiftool
       jellyfin-media-player
+      helvum # GTK patchbay for pipewire
     ];
 
     sessionVariables = {
