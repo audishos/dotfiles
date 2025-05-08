@@ -3,11 +3,11 @@
     enable = true;
     sway.enable = true;
 
-    name = "mochaGreen";
+    name = "catppuccin-mocha-green-cursors";
     package = pkgs.catppuccin-cursors.mochaGreen;
   };
 
   # sway config generation contains a dependency on this value
   # https://github.com/nix-community/home-manager/blob/master/modules/config/home-cursor.nix#L251
-  gtk.cursorTheme.size = 32;
+  gtk.cursorTheme.size = 24;
 }
