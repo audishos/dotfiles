@@ -4,21 +4,22 @@
 
     packages = with pkgs; [
       atkinson-hyperlegible
-      noto-fonts
-      noto-fonts-cjk-sans
-      noto-fonts-emoji
+      dina-font
       font-awesome
       liberation_ttf
       mplus-outline-fonts.githubRelease
-      dina-font
+      nerd-fonts.fantasque-sans-mono
+      nerd-fonts.fira-code
+      nerd-fonts.hurmit
+      nerd-fonts.jetbrains-mono
+      nerd-fonts.space-mono
+      noto-fonts
+      noto-fonts-cjk-sans
+      noto-fonts-emoji
       proggyfonts
       source-han-sans
       source-han-sans-japanese
       source-han-serif-japanese
-      nerd-fonts.fira-code
-      nerd-fonts.fantasque-sans-mono
-      nerd-fonts.jetbrains-mono
-      nerd-fonts.space-mono
     ];
 
     fontconfig.defaultFonts = {
