@@ -167,7 +167,13 @@
     firefox = {
       enable = true;
       # non-bin was failing to build
-      package = pkgs.firefox-devedition-bin;
+      package = pkgs.firefox-devedition.override {
+        # See nixpkgs' firefox/wrapper.nix to check which options you can use
+        nativeMessagingHosts = [
+          # Tridactyl native connector
+          pkgs.tridactyl-native
+        ];
+      };
     };
 
     # librewolf.enable = true;
