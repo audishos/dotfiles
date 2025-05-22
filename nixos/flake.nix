@@ -3,7 +3,6 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    nixpkgs-chromium.url = "github:NixOS/nixpkgs/2748d22b45a99fb2deafa5f11c7531c212b2cefa";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -23,7 +22,6 @@
     home-manager,
     catppuccinWaybar,
     nnnSrc,
-    nixpkgs-chromium,
     ...
   }: let
     # system should match the system you are running on
@@ -63,9 +61,6 @@
             home-manager.extraSpecialArgs = {
               inherit catppuccinWaybar;
               inherit nnnSrc;
-              pkgsChromium = import nixpkgs-chromium {
-                inherit system;
-              };
             };
           }
         ];

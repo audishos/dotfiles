@@ -1,8 +1,4 @@
-{
-  pkgs,
-  pkgsChromium,
-  ...
-}: {
+{pkgs, ...}: {
   imports = [
     ./home/calibre.nix
     ./home/cursors.nix
@@ -179,7 +175,7 @@
 
     chromium = {
       enable = true;
-      package = pkgsChromium.ungoogled-chromium;
+      package = pkgs.ungoogled-chromium;
     };
 
     thunderbird = {
