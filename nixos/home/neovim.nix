@@ -211,9 +211,9 @@ in {
       nil
       nixpkgs-fmt
       nodePackages.bash-language-server
-      nodePackages.prettier
       nodePackages.typescript-language-server
       nvimpager
+      (lib.hiPrio prettier)
       prettierd
       ripgrep
       selene
