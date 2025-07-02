@@ -18,6 +18,7 @@
     ./home/waybar.nix
     ./home/wezterm.nix
     ./home/wofi.nix
+    ./home/yazi.nix
     ./home/zsh.nix
   ];
 
