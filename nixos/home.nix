@@ -8,6 +8,7 @@
     ./home/gaming.nix
     ./home/git.nix
     ./home/kitty.nix
+    ./home/mako.nix
     ./home/neovim.nix
     ./home/nextcloud.nix
     ./home/nnn.nix
@@ -63,7 +64,6 @@
       fuse-overlayfs
       dwarfs
       wl-clipboard
-      mako
       alacritty
       pavucontrol
       xdg-utils
