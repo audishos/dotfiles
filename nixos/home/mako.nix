@@ -5,7 +5,7 @@
     settings = {
       on-button-middle = "dismiss-all";
 
-      default-timeout = 30;
+      default-timeout = 1000 * 30;
 
       # Catppuccin macchiato green
       background-color = "#24273a";
