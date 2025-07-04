@@ -1,5 +1,6 @@
 {pkgs, ...}: {
   imports = [
+    ./home/android.nix
     ./home/calibre.nix
     ./home/cursors.nix
     ./home/default-applications.nix
