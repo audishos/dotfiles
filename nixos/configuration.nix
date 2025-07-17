@@ -191,6 +191,9 @@
     extraRules = ''
       # Wake on input from USB keyboard
       ACTION=="add", SUBSYSTEM=="usb", DRIVER=="usb", ATTR{power/wakeup}="enabled"
+
+      # Allows waybar to access input devices
+      SUBSYSTEM=="input", MODE="660"
     '';
   };
   services.flatpak.enable = true;
