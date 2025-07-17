@@ -83,7 +83,7 @@
       deluge-gtk
       streamlink
       streamlink-twitch-gui-bin
-      qpdfview
+      pdf4qt
       # Never ending build lol
       # libreoffice-fresh
       htop
@@ -115,6 +115,7 @@
       exiftool
       jellyfin-media-player
       helvum # GTK patchbay for pipewire
+      libarchive
     ];
 
     sessionVariables = {
