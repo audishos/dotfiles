@@ -183,7 +183,11 @@
   };
 
   services.udev = {
-    # packages = with pkgs; [mixxx];
+    packages = with pkgs; [
+      # mixxx
+      android-udev-rules
+    ];
+
     extraRules = ''
       # Wake on input from USB keyboard
       ACTION=="add", SUBSYSTEM=="usb", DRIVER=="usb", ATTR{power/wakeup}="enabled"
