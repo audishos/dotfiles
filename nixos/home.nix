@@ -138,6 +138,11 @@
         portal = true;
       };
     };
+
+    kdeconnect = {
+      enable = true;
+      indicator = true;
+    };
   };
 
   xdg.portal = {
