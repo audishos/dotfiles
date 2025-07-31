@@ -52,7 +52,7 @@
       nodejs
       nodePackages_latest.pnpm
       mono
-      audacity
+      # audacity
       libsForQt5.dolphin
       libsForQt5.kalk
       cheese
