@@ -208,5 +208,7 @@
     mpv.enable = true;
 
     nheko.enable = true;
+
+    fish.enable = true;
   };
 }
