@@ -52,9 +52,9 @@
       nodejs
       nodePackages_latest.pnpm
       mono
-      # audacity
-      libsForQt5.dolphin
+      audacity
       libsForQt5.kalk
+      pcmanfm
       cheese
       fd
       rust-analyzer-unwrapped
