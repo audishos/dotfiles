@@ -80,6 +80,7 @@
       python3
       udisks
       pinta # simple image editor
+      gimp3-with-plugins
       deluge-gtk
       streamlink
       streamlink-twitch-gui-bin
