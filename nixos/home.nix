@@ -117,6 +117,7 @@
       jellyfin-media-player
       helvum # GTK patchbay for pipewire
       libarchive
+      net-tools
     ];
 
     sessionVariables = {
