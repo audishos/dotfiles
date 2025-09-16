@@ -90,6 +90,7 @@
       htop
       gotop
       telegram-desktop
+      kotatogram-desktop
       p7zip
       sublime3
       ncpamixer # TUI alternative to pavucontrol
