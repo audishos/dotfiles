@@ -53,7 +53,7 @@
       nodePackages_latest.pnpm
       mono
       audacity
-      libsForQt5.kalk
+      kdePackages.kalk
       pcmanfm
       cheese
       fd

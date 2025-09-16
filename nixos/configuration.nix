@@ -158,6 +158,7 @@
       "electron-29.4.6"
       "electron-27.3.11"
       "olm-3.2.16"
+      "qtwebengine-5.15.19"
     ];
   };
 
