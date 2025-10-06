@@ -3,7 +3,7 @@
     enable = true;
 
     defaultApplications = {
-      "application/pdf" = "qpdfview.desktop";
+      "application/pdf" = "Pdf4QtViewer.desktop";
       "application/rss+xml" = "userapp-Thunderbird-QWEJ12.desktop";
       "application/x-extension-htm" = "firefox-devedition.desktop";
       "application/x-extension-html" = "firefox-devedition.desktop";
@@ -29,6 +29,16 @@
       "x-scheme-handler/tonsite" = "org.telegram.desktop.desktop";
       "x-scheme-handler/webcal" = "userapp-Thunderbird-NKMI12.desktop";
       "x-scheme-handler/webcals" = "userapp-Thunderbird-NKMI12.desktop";
+    };
+
+    associations = {
+      added = {
+        "x-scheme-handler/tg" = "io.github.kotatogram.desktop";
+      };
+
+      removed = {
+        "*" = ["chromium.desktop" "calibre.desktop"];
+      };
     };
   };
 }

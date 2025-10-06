@@ -106,6 +106,7 @@
       telegram-desktop
       television # fast file search TUI https://github.com/alexpasmantier/television
       udisks
+      unrar
       unzip
       vesktop
       wdisplays
