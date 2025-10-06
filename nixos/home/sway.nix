@@ -36,7 +36,7 @@ in {
       };
       startup = [
         {command = "${pkgs.coreutils}/bin/sleep 5 && ${pkgs.keepassxc}/bin/keepassxc";}
-        {command = "${pkgs.wayland-pipewire-idle-inhibit}/bin/wayland-pipewire-idle-inhibit";}
+        {command = "${pkgs.coreutils}/bin/sleep 5 && ${pkgs.wayland-pipewire-idle-inhibit}/bin/wayland-pipewire-idle-inhibit --media-minimum-duration 120";}
       ];
       input = {
         "*" = {
