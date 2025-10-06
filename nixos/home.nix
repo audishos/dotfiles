@@ -44,81 +44,79 @@
     username = "audisho";
     homeDirectory = "/home/audisho";
     packages = with pkgs; [
-      httpie
-      bat
-      micro
-      keepassxc
-      android-tools
-      nodejs
-      nodePackages_latest.pnpm
-      mono
-      audacity
-      kdePackages.kalk
-      pcmanfm
-      cheese
-      fd
-      rust-analyzer-unwrapped
-      unzip
-      zig
-      bubblewrap
-      fuse-overlayfs
-      dwarfs
-      wl-clipboard
-      alacritty
-      pavucontrol
-      xdg-utils
-      glib
-      dracula-theme
       adwaita-icon-theme
-      grim
-      slurp
-      wdisplays
-      zip
+      alacritty
+      android-tools
+      audacity
+      bat
       binutils
-      ruff
-      openssl
-      python3
-      udisks
-      pinta # simple image editor
-      gimp3-with-plugins
-      deluge-gtk
-      streamlink
-      streamlink-twitch-gui-bin
-      pdf4qt
-      # Never ending build lol
-      # libreoffice-fresh
-      htop
-      gotop
-      telegram-desktop
-      kotatogram-desktop
-      p7zip
-      sublime3
-      ncpamixer # TUI alternative to pavucontrol
-      inkscape
-      vesktop
-      r2modman
       bruno
-      # removed - lack of maintenance 😢
-      # logseq
-      zoom-us
-      dig # DNS lookup utility
-      ollama-rocm
-      netcat-gnu
-      sshfs # Mount filesystems over SSH https://github.com/libfuse/sshfs
+      bubblewrap
       bzip2
       bzip3
-      gzip
-      television # fast file search TUI https://github.com/alexpasmantier/television
-      zk # plain text personal wiki https://github.com/zk-org/zk
-      zenith # like htop with GPU https://github.com/bvaisvil/zenith
-      ffmpeg
-      playwright
-      rsync
+      cheese
+      deluge-gtk
+      dig # DNS lookup utility
+      dracula-theme
+      dwarfs
       exiftool
-      jellyfin-media-player
+      fd
+      ffmpeg
+      fuse-overlayfs
+      gimp3-with-plugins
+      glib
+      gotop
+      grim
+      gzip
       helvum # GTK patchbay for pipewire
+      htop
+      httpie
+      inkscape
+      jellyfin-media-player
+      kdePackages.kalk
+      keepassxc
+      kotatogram-desktop
       libarchive
+      micro
+      mono
+      ncpamixer # TUI alternative to pavucontrol
       net-tools
+      netcat-gnu
+      nodePackages_latest.pnpm
+      nodejs
+      ollama-rocm
+      openssl
+      p7zip
+      pavucontrol
+      pcmanfm
+      pdf4qt
+      pinta # simple image editor
+      playwright
+      python3
+      r2modman
+      rsync
+      ruff
+      rust-analyzer-unwrapped
+      signal-desktop
+      slurp
+      sshfs # Mount filesystems over SSH https://github.com/libfuse/sshfs
+      streamlink
+      streamlink-twitch-gui-bin
+      sublime3
+      telegram-desktop
+      television # fast file search TUI https://github.com/alexpasmantier/television
+      udisks
+      unzip
+      vesktop
+      wdisplays
+      weechat
+      wl-clipboard
+      xdg-utils
+      zenith # like htop with GPU https://github.com/bvaisvil/zenith
+      zig
+      zip
+      zk # plain text personal wiki https://github.com/zk-org/zk
+      zoom-us
     ];
 
     sessionVariables = {
