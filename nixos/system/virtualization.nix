@@ -1,6 +1,10 @@
 {
-  virtualisation.libvirtd.enable = true;
-  users.extraUsers.audisho.extraGroups = ["libvirtd"];
+  virtualisation = {
+    libvirtd.enable = true;
+    docker.enable = true;
+  };
+
+  users.extraUsers.audisho.extraGroups = ["libvirtd" "docker"];
 
   boot.extraModprobeConfig = ''
     options kvm_intel nested=1
