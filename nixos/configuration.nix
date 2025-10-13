@@ -13,6 +13,7 @@
     # ./home-manager.nix
     ./system/fonts.nix
     ./system/network-shares.nix
+    ./system/virtualization.nix
   ];
 
   # Use the systemd-boot EFI boot loader.
@@ -147,7 +148,7 @@
     isNormalUser = true;
     shell = pkgs.zsh;
     home = "/home/audisho";
-    extraGroups = ["wheel" "networkmanager"]; # Enable ‘sudo’ for the user.
+    extraGroups = ["wheel" "networkmanager"];
   };
 
   # List packages installed in system profile. To search, run:
@@ -158,7 +159,6 @@
       "electron-29.4.6"
       "electron-27.3.11"
       "olm-3.2.16"
-      "qtwebengine-5.15.19"
     ];
   };
 

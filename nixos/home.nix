@@ -72,7 +72,8 @@
       htop
       httpie
       inkscape
-      jellyfin-media-player
+      # Depends on insecure package qtwebengine-5.15.19 (loooong build time)
+      # jellyfin-media-player
       kdePackages.kalk
       keepassxc
       kotatogram-desktop
