@@ -50,18 +50,4 @@
       rocmPackages.clr.icd
     ];
   };
-
-  # enables HIP -> https://wiki.nixos.org/wiki/AMD_GPU
-  systemd.tmpfiles.rules = let
-    rocmEnv = pkgs.symlinkJoin {
-      name = "rocm-combined";
-      paths = with pkgs.rocmPackages; [
-        rocblas
-        hipblas
-        clr
-      ];
-    };
-  in [
-    "L+    /opt/rocm   -    -    -     -    ${rocmEnv}"
-  ];
 }

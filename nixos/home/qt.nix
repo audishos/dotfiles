@@ -15,6 +15,6 @@
   };
 
   home.packages = with pkgs; [
-    libsForQt5.breeze-icons
+    kdePackages.breeze-icons
   ];
 }
