@@ -57,6 +57,7 @@
       cheese
       deluge-gtk
       dig # DNS lookup utility
+      dmg2img
       dracula-theme
       dwarfs
       exiftool
@@ -107,6 +108,7 @@
       telegram-desktop
       television # fast file search TUI https://github.com/alexpasmantier/television
       udisks
+      unetbootin
       unrar
       unzip
       vesktop
