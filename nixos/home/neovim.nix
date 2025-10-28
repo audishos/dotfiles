@@ -166,8 +166,8 @@ in {
           { import = "lazyvim.plugins.extras.dap.core" },
           -- The following configs are needed for fixing lazyvim on nix
           -- disable mason.nvim, use programs.neovim.extraPackages
-          { "williamboman/mason-lspconfig.nvim", enabled = false },
-          { "williamboman/mason.nvim", enabled = false },
+          { "mason-org/mason-lspconfig.nvim", enabled = false },
+          { "mason-org/mason.nvim", enabled = false },
           -- import/override with your plugins
           { import = "plugins" },
           -- treesitter handled by "nvim/parser", put this line at the end of spec to clear ensure_installed
