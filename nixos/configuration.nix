@@ -186,7 +186,6 @@
   services.udev = {
     packages = with pkgs; [
       # mixxx
-      android-udev-rules
     ];
 
     extraRules = ''
