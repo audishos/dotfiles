@@ -220,5 +220,8 @@
     nheko.enable = true;
 
     fish.enable = true;
+
+    jq.enable = true;
+    jqp.enable = true;
   };
 }
