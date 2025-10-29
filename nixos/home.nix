@@ -168,6 +168,11 @@
     bash.enable = true;
     hyfetch.enable = true;
 
+    nix-index = {
+      enable = true;
+      enableZshIntegration = true;
+    };
+
     fzf = {
       enable = true;
       enableZshIntegration = true;
