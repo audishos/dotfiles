@@ -4,6 +4,7 @@
     ./home/calibre.nix
     ./home/cursors.nix
     ./home/default-applications.nix
+    ./home/files.nix
     ./home/fuzzel.nix
     ./home/gaming.nix
     ./home/git.nix
@@ -90,7 +91,6 @@
       openssl
       p7zip
       pavucontrol
-      pcmanfm
       pdf4qt
       pinta # simple image editor
       playwright
