@@ -109,10 +109,12 @@ in {
     lazygit = {
       enable = true;
       settings = {
-        git.paging = {
-          colorArg = "always";
-          pager = "${pkgs.delta}/bin/delta --dark --paging=never --line-numbers --hyperlinks --hyperlinks-file-link-format=\"lazygit-edit://{path}:{line}\"";
-        };
+        git.pagers = [
+          {
+            colorArg = "always";
+            pager = "${pkgs.delta}/bin/delta --dark --paging=never --line-numbers --hyperlinks --hyperlinks-file-link-format=\"lazygit-edit://{path}:{line}\"";
+          }
+        ];
       };
     };
   };
