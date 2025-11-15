@@ -78,7 +78,6 @@
       # jellyfin-media-player
       kdePackages.kalk
       keepassxc
-      kotatogram-desktop
       libarchive
       micro
       mono
