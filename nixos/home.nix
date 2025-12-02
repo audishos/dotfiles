@@ -120,6 +120,10 @@
       zip
       zk # plain text personal wiki https://github.com/zk-org/zk
       zoom-us
+      (discord.override {
+        # withOpenASAR = true; # can do this here too
+        withVencord = true;
+      })
     ];
 
     sessionVariables = {
