@@ -99,17 +99,12 @@ in {
 
   services.swayidle = {
     enable = true;
-    events = [
+    events =
       # Lock before suspend
       {
-        event = "before-sleep";
-        command = "${pkgs.swaylock}/bin/swaylock -fF";
-      }
-      {
-        event = "lock";
-        command = "${pkgs.swaylock}/bin/swaylock -fF";
-      }
-    ];
+        "before-sleep" = "${pkgs.swaylock}/bin/swaylock -fF";
+        "lock" = "lock";
+      };
     timeouts = [
       # Lock after 5 minutes
       {
