@@ -80,6 +80,7 @@
       keepassxc
       libarchive
       micro
+      libreoffice-qt
       mono
       ncpamixer # TUI alternative to pavucontrol
       net-tools
