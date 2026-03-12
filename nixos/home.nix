@@ -59,6 +59,7 @@
       deluge-gtk
       dig # DNS lookup utility
       dmg2img
+      dolphin-emu
       dracula-theme
       dwarfs
       exiftool
