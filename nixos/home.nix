@@ -56,6 +56,7 @@
       bzip2
       bzip3
       cheese
+      crosspipe
       deluge-gtk
       dig # DNS lookup utility
       dmg2img
@@ -71,7 +72,6 @@
       gotop
       grim
       gzip
-      helvum # GTK patchbay for pipewire
       htop
       httpie
       inkscape

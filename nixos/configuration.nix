@@ -175,7 +175,7 @@
     samba
     cifs-utils
     gnumake
-    wineWowPackages.stable
+    wineWow64Packages.stable
   ];
 
   programs.steam.enable = true;
