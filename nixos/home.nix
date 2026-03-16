@@ -56,6 +56,7 @@
       bzip2
       bzip3
       cheese
+      chezmoi
       crosspipe
       deluge-gtk
       dig # DNS lookup utility
