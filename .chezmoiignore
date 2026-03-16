@@ -1,3 +1,17 @@
 lazy-lock.json
 lazyvim.json
 nixos/
+
+{{ if ne .chezmoi.os "darwin" }}
+dot_config/aerospace/
+dot_config/borders/
+{{ end }}
+
+{{ if ne .chezmoi.os "linux" }}
+dot_config/fuzzel/
+dot_config/mako/
+dot_config/sway/
+dot_config/swaylock/
+dot_config/waybar/
+dot_config/wofi/
+{{ end }}
