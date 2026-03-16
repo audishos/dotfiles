@@ -1,0 +1,23 @@
+[core]
+	pager = "delta"
+
+[credential "https://gist.github.com"]
+	helper = ""
+	helper = "gh auth git-credential"
+
+[credential "https://github.com"]
+	helper = ""
+	helper = "gh auth git-credential"
+
+[gpg]
+	format = "openpgp"
+
+[gpg "openpgp"]
+	program = "gpg"
+
+[interactive]
+	diffFilter = "delta --color-only"
+
+[user]
+	email = "audisho.sada@gmail.com"
+	name = "audishos"

@@ -1,0 +1,36 @@
+@import "mocha.css";
+
+* {
+  font-family: SpaceMono Nerd Font Propo;
+  font-size: 14px;
+  font-weight: 700;
+  min-height: 0;
+}
+
+.modules-left,
+.modules-center,
+.modules-right {
+  background-color: @base;
+  margin: 0 8px;
+  padding: 0 16px;
+  border-radius: 12px;
+  opacity: 0.85;
+}
+
+window#waybar {
+  color: @text;
+  background-color: transparent;
+}
+
+#workspaces button {
+  color: @text;
+  border-radius: 64px;
+  margin: 4px 0;
+}
+
+#workspaces button.focused,
+#workspaces button.active,
+#workspaces button.visible {
+  background-color: @green;
+  color: @crust;
+}
