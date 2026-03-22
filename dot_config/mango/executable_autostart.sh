@@ -18,7 +18,7 @@ swaybg -i ~/Nextcloud/aizhai_bridge-1.jpg -m fill >/dev/null 2>&1 &
 wayland-pipewire-idle-inhibit >/dev/null 2>&1 &
 
 # passwords
-sleep 10 keepass-xc >/dev/null 2>&1 &
+sleep 5 && keepassxc >/dev/null 2>&1 & # sleep fixes tray icon not mounting
 
 # file sync
-sleep 10 nextcloud >/dev/null 2>&1 &
+sleep 5 && nextcloud >/dev/null 2>&1 &
