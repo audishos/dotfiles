@@ -1,9 +1,9 @@
 @import "mocha.css";
 
 * {
-  font-family: SpaceMono Nerd Font Propo;
-  font-size: 14px;
-  font-weight: 700;
+  font-family: MartianMono Nerd Font Propo;
+  font-size: 13px;
+  font-weight: 400;
   min-height: 0;
 }
 
