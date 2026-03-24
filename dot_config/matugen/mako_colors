@@ -1,0 +1,12 @@
+##
+# HEX Colors
+# Generated with Matugen
+##
+
+background-color={{colors.background.default.hex}}
+border-color={{colors.primary.default.hex}}
+progress-color=over {{colors.secondary.default.hex}}
+text-color={{colors.on_background.default.hex}}
+
+[urgency=high]
+border-color={{colors.error.default.hex}}

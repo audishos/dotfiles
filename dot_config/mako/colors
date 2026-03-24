@@ -1,0 +1,12 @@
+##
+# HEX Colors
+# Generated with Matugen
+##
+
+background-color=#15130c
+border-color=#d9c76f
+progress-color=over #d0c7a2
+text-color=#e8e2d4
+
+[urgency=high]
+border-color=#ffb4ab

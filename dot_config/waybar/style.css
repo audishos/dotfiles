@@ -1,4 +1,4 @@
-@import "mocha.css";
+@import "colors.css";
 
 * {
   font-family: MartianMono Nerd Font Propo;
@@ -10,7 +10,7 @@
 .modules-left,
 .modules-center,
 .modules-right {
-  background-color: @base;
+  background-color: @background;
   margin: 0 8px;
   padding: 0 16px;
   border-radius: 12px;
@@ -18,12 +18,12 @@
 }
 
 window#waybar {
-  color: @text;
+  color: @primary;
   background-color: transparent;
 }
 
 #workspaces button {
-  color: @text;
+  color: @primary;
   border-radius: 64px;
   margin: 4px 0;
 }
@@ -31,6 +31,6 @@ window#waybar {
 #workspaces button.focused,
 #workspaces button.active,
 #workspaces button.visible {
-  background-color: @green;
-  color: @crust;
+  background-color: @secondary;
+  color: @on_secondary;
 }
