@@ -11,6 +11,9 @@ waybar -c ~/.config/mango/waybar/config.jsonc >/dev/null 2>&1 &
 # wallpaper
 swaybg -i ~/Nextcloud/aizhai_bridge-1.jpg -m fill >/dev/null 2>&1 &
 
+# notifications
+mako >/dev/null 2>&1 &
+
 # automatic lock and sleep
 ~/.config/mango/scripts/idle.sh >/dev/null 2>&1 &
 
