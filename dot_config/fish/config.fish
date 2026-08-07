@@ -13,3 +13,5 @@ if status is-interactive
 end
 
 mise activate fish | source
+
+fish_add_path /home/audisho/.spicetify
