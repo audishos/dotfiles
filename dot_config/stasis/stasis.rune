@@ -1,0 +1,187 @@
+@author "Dustin Pilgrim"
+@description "Stasis configuration file"
+
+# --------------------------------------------------------------------
+# DEFAULT (base config)
+#
+# Desktop:
+#   Uses the action blocks directly inside `default:`
+#
+# Laptop:
+#   Ignores the action blocks directly inside `default:` and instead uses
+#   either `default.ac:` or `default.battery:` depending on current power.
+#
+# Profiles:
+#   Apply on top of the active base (desktop/default OR laptop/ac/battery),
+#   using the profile's `mode`.
+# --------------------------------------------------------------------
+default:
+  # ----- Global knobs (these DO get overridden by profiles) -----
+  enable_loginctl_integration false
+  enable_dbus_inhibit true
+  pre_suspend_command None
+  monitor_media true
+  ignore_remote_media true
+  debounce_seconds 5
+
+  # Shell command to run immediately when logind emits PrepareForSleep(true).
+  # Unlike `pre_suspend_command`, this triggers when sleep is initiated externally.
+  # prepare_sleep_command "hyprlock"
+
+  # Hardware low-power mode: after the DPMS step fires, wait this many seconds
+  # then apply conservative GPU power-saving (runtime PM + amdgpu DPM).
+  # Everything changed is snapshotted and restored exactly on resume.
+  # Requires write access to GPU sysfs (udev rule or elevated privileges).
+  #low_power_when_idle false
+  #low_power_when_idle_timeout 10
+
+  # Lid actions (optional, laptop only)
+  #
+  # Shell commands run immediately on lid close or open.
+  # Lid close/open also pause/resume the plan timers regardless.
+  #
+  # These live under `default:` (global) so they apply for both
+  # `default.ac:` and `default.battery:` without duplicating them.
+  #
+  # A profile can override or clear them (set to "").
+  #
+  # Examples:
+  #   lid_close_action "hyprlock"
+  #   lid_open_action  "brightnessctl set 60%"
+  #
+  # lid_close_action "hyprlock"
+  #lid_open_action "hyprctl dispatch dpms on"
+
+  # When resuming from IPC pause timers (e.g. `stasis pause 1h`)
+  notify_on_unpause true
+
+  # Enables per-step notifications (only if the block sets `notification`)
+  notify_before_action true
+
+  # Icon name/path for Stasis-generated notifications. Defaults to "stasis".
+  # Set to "" to disable the default icon, or override per step with
+  # `notification_icon`.
+  #notification_icon "dialog-warning"
+
+  # Apps that inhibit Stasis while running (regex allowed via r"...")
+  inhibit_apps [
+    "mpv"
+    "vlc"
+    "Spotify"
+    r".*\.exe"
+    r"steam_app_.*"
+    r"firefox.*"
+  ]
+
+  # ----------------------------------------------------------------
+  # DESKTOP PLAN (used only on desktop chassis)
+  # ----------------------------------------------------------------
+  startup:
+    timeout 0
+    command "notify-send -a Stasis 'Stasis started!'"
+  end
+
+  early_dpms:
+    timeout 300
+    command "niri msg action power-off-monitors"
+    resume_command "niri msg action power-on-monitors"
+  end
+
+  lock_screen:
+    timeout 300
+    command "swaylock -fF"
+    resume_command "notify-send 'Welcome Back $env.USER!'"
+    notification "Locking session in 10s"
+    #notification_icon "dialog-warning"
+    notify_seconds_before 10
+  end
+
+  dpms:
+    timeout 60
+    command "niri msg action power-off-monitors"
+    resume_command "niri msg action power-on-monitors"
+  end
+
+  suspend:
+    timeout 1800
+    command "systemctl suspend"
+  end
+end
+
+
+# --------------------------------------------------------------------
+# PROFILES
+#
+# mode "overlay":
+#   - Overrides globals it specifies (monitor_media, debounce_seconds, etc.)
+#   - Overrides/extends action blocks it specifies
+#   - Inherits everything else from the active base
+#
+# mode "fresh":
+#   - Starts from NOTHING (no base globals, no base plan)
+#   - You must specify every global/step you want
+# --------------------------------------------------------------------
+
+gaming:
+  mode "overlay"   # merges on top of active base (desktop/default OR laptop/ac/battery)
+
+  # Override globals (example: add/replace inhibitors)
+  inhibit_apps [
+    r".*\.exe"
+    r"steam_app_.*"
+    r".*\.x86_64"
+  ]
+end
+
+work:
+  mode "overlay"
+
+  # Override globals (example: longer debounce, keep media monitoring)
+  enable_loginctl_integration true
+  enable_dbus_inhibit true
+  debounce_seconds 10
+  monitor_media true
+  ignore_remote_media true
+
+  # Override specific steps (everything not mentioned is inherited)
+  lock_screen:
+    timeout 600
+    command "hyprlock"
+    resume_command "notify-send 'Welcome back, $env.USER!'"
+  end
+
+  dpms:
+    timeout 300
+    command "hyprctl dispatch dpms off"
+    resume_command "hyprctl dispatch dpms on"
+  end
+
+  suspend:
+    timeout 3600
+    command "systemctl suspend"
+  end
+end
+
+presentation:
+  mode "fresh"   # fresh config: define ALL globals + ONLY the steps you want
+
+  # Globals (must be set because fresh does not inherit defaults)
+  enable_dbus_inhibit true
+  pre_suspend_command None
+  monitor_media false
+  ignore_remote_media true
+  debounce_seconds 0
+  notify_on_unpause false
+  notify_before_action false
+  inhibit_apps [ ]
+
+  # Clear lid actions so they don't fire during a presentation
+  lid_close_action ""
+  lid_open_action ""
+
+  # Keep the display awake / bright; no lock, dpms, suspend unless you add them
+  brightness:
+    timeout 0
+    command "brightnessctl set 100%"
+  end
+end
