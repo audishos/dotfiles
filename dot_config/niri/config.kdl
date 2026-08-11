@@ -23,6 +23,8 @@ input {
 
         // Enable numlock on startup, omitting this setting disables it.
         numlock
+
+        repeat-delay 200
     }
 
     // Next sections include libinput settings.
@@ -123,6 +125,7 @@ layout {
     // - "on-overflow", focusing a column will center it if it doesn't fit
     //   together with the previously focused column.
     center-focused-column "never"
+    always-center-single-column
 
     // You can customize the widths that "switch-preset-column-width" (Mod+R) toggles between.
     preset-column-widths {
@@ -608,9 +611,9 @@ binds {
     // Mod+Space       { switch-layout "next"; }
     // Mod+Shift+Space { switch-layout "prev"; }
 
-    Print { screenshot; }
-    Ctrl+Print { screenshot-screen; }
-    Alt+Print { screenshot-window; }
+    Mod+P { screenshot; }
+    Ctrl+P { screenshot-screen; }
+    Alt+P { screenshot-window; }
 
     // Applications such as remote-desktop clients and software KVM switches may
     // request that niri stops processing the keyboard shortcuts defined here
@@ -629,4 +632,9 @@ binds {
     // Powers off the monitors. To turn them back on, do any input like
     // moving the mouse or pressing any other key.
     Mod+Shift+P { power-off-monitors; }
+}
+
+window-rule {
+    geometry-corner-radius 12
+    clip-to-geometry true
 }

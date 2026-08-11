@@ -79,6 +79,7 @@
     ],
     "modules-left": [
       "niri/workspaces",
+      "wlr/taskbar",
       "custom/media"
     ],
     "modules-right": [
@@ -176,6 +177,9 @@
     },
     "tray": {
       "spacing": 10
+    },
+    "wlr/taskbar": {
+      "on-click": "activate"
     }
   }
 ]
