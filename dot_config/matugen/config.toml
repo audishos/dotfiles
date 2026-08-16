@@ -1,13 +1,29 @@
 [config]
 
+[config.wallpaper]
+# Whether to set the wallpaper or not
+set = true
+
+# The base command to run for applying the wallpaper.
+# Keywords like {{ image }} or anything that works inside of hooks works here.
+# You could also set a static color if you use the color keywords and the wallpaper setter supports it.
+command = "swaybg -i {{ image }} > /dev/null 2>&1 &"
+
+# For example, killing the wallpaper daemon. Usage is like a normal hook.
+pre_hook = "cp {{ image }} ~/Pictures/Wallpaper/current"
+
 [templates.waybar]
 input_path = '~/.config/matugen/colors.css'
 output_path = '~/.config/waybar/colors.css'
 
-[templates.mango]
-input_path = '~/.config/matugen/mango_colors.conf'
-output_path = '~/.config/mango/colors.conf'
-post_hook = 'mmsg -d reload_config' 
+# [templates.mango]
+# input_path = '~/.config/matugen/mango_colors.conf'
+# output_path = '~/.config/mango/colors.conf'
+# post_hook = 'mmsg -d reload_config'
+
+[templates.niri]
+input_path = '~/.config/matugen/niri_colors.kdl'
+output_path = '~/.config/niri/colors.kdl'
 
 [templates.mako]
 input_path = '~/.config/matugen/mako_colors'

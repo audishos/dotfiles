@@ -1,0 +1,17 @@
+/////////////////////////
+// HEX Colors
+// Generated with Matugen
+/////////////////////////
+
+layout {
+  focus-ring {
+    // Color of the ring on the active monitor.
+    active-color "{{colors.primary.default.hex}}"
+
+    // Color of the ring on inactive monitors.
+    //
+    // The focus ring only draws around the active window, so the only place
+    // where you can see its inactive-color is on other monitors.
+    inactive-color "{{colors.inverse_primary.default.hex}}"
+  }
+}
