@@ -1,7 +1,8 @@
 @import "colors.css";
 
 * {
-  font-family: "Poppins Medium", "Font Awesome 7 Free";
+  font-family: "Inter", "Font Awesome 7 Free";
+  font-weight: 600;
   font-size: 1rem;
 }
 
