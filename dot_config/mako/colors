@@ -3,10 +3,10 @@
 # Generated with Matugen
 ##
 
-background-color=#15130c
-border-color=#d9c76f
-progress-color=over #d0c7a2
-text-color=#e8e2d4
+background-color=#16130b
+border-color=#ddc56e
+progress-color=over #d2c6a1
+text-color=#e9e2d4
 
 [urgency=high]
 border-color=#ffb4ab

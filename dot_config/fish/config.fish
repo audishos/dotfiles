@@ -15,3 +15,4 @@ end
 mise activate fish | source
 
 fish_add_path /home/audisho/.spicetify
+fish_add_path /home/audisho/.local/bin

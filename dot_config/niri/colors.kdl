@@ -6,12 +6,12 @@
 layout {
   focus-ring {
     // Color of the ring on the active monitor.
-    active-color "#afc6ff"
+    active-color "#ddc56e"
 
     // Color of the ring on inactive monitors.
     //
     // The focus ring only draws around the active window, so the only place
     // where you can see its inactive-color is on other monitors.
-    inactive-color "#465d91"
+    inactive-color "#6f5d0e"
   }
 }
