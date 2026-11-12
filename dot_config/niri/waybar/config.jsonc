@@ -68,7 +68,7 @@
         "locked": "",
         "unlocked": ""
       },
-      "numlock": true
+      "numlock": false
     },
     "memory": {
       "format": "{}% "
@@ -91,7 +91,7 @@
       "memory",
       "temperature",
       "keyboard-state",
-      "sway/language",
+      "niri/language",
       "clock",
       "tray"
     ],
