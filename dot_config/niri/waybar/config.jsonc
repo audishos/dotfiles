@@ -80,10 +80,10 @@
     "modules-left": [
       "niri/workspaces",
       "wlr/taskbar",
+      "mpd",
       "custom/media"
     ],
     "modules-right": [
-      "mpd",
       "idle_inhibitor",
       "pulseaudio",
       "network",
@@ -100,7 +100,7 @@
         "on": ""
       },
       "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
-      "format-disconnected": "Disconnected ",
+      "format-disconnected": "",
       "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
       "interval": 2,
       "random-icons": {
